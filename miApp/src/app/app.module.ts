@@ -7,14 +7,17 @@ import { AgregarEmpleadoComponent } from './componentes/agregar-empleado/agregar
 import { EditarEmpleadoComponent } from './componentes/editar-empleado/editar-empleado.component';
 import { ListarEmpleadoComponent } from './componentes/listar-empleado/listar-empleado.component';
 import { LandingComponent } from './componentes/landing/landing.component';
+import { Error404Component } from './componentes/error404/error404.component';
 //import { Route } from '@angular/router';
 
-const router: Routes = [
-  {path: '', pathMatch:'full', redirectTo: 'landing'},
+const routes: Routes = [
+  {path: '', pathMatch:'full', redirectTo: 'error404'},
+  {path: 'home', loadChildren: ()=> import('./modules').then(m => m.HomeModule)},
   {path: 'agregar-empleado', component: AgregarEmpleadoComponent},
   {path: 'listar-empleado', component: ListarEmpleadoComponent},
   {path: 'editar-empleado', component: EditarEmpleadoComponent},
   {path: 'landing', component: LandingComponent},
+  {path: 'error404', component: Error404Component},
 ];
 
 @NgModule({
@@ -23,11 +26,12 @@ const router: Routes = [
     AgregarEmpleadoComponent,
     EditarEmpleadoComponent,
     ListarEmpleadoComponent,
-    LandingComponent
+    LandingComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(router)
+    RouterModule.forRoot(routes)
   ],
   exports:[
     RouterModule
