@@ -1,1 +1,113 @@
-<p>landing works!</p>
+<div class="row">
+    <div class="col-6">
+        <img src="assets/imgs/robot.png" class="d-block w-25">
+    </div>
+    <div class="col-6">
+        <form action="#" method="POST" id="form_landing">
+
+            <fieldset>
+                <legend class="d-none">Nombre usuario</legend>
+                <div class="input_group">
+                    <label for="usuario" class="d-none">Nombre usuario obligatorio</label>
+                    <input type="text"
+                        name="usuario"
+                        class="form-control"
+                        placeholder="Usuario"
+                        id="usuario_landing">
+                </div>
+                <p id="error_usuario"></p>
+            </fieldset>
+
+            <fieldset>
+                <legend class="d-none">Nombre</legend>
+                <div class="input_group">
+                    <label for="nombre" class="d-none">Nombre obligatorio</label>
+                    <input type="text"
+                        name="nombre"
+                        class="form-control"
+                        placeholder="Nombre"
+                        id="nombre_landing">
+                </div>
+                <p id="error_nombre"></p>
+            </fieldset>
+            
+            <fieldset>
+                <legend class="d-none">Apellidos</legend>
+                <div class="input_group">
+                    <label for="apellidos" class="d-none">Apellidos obligatorio</label>
+                    <input type="text"
+                        name="apellidos"
+                        class="form-control"
+                        placeholder="Apellidos"
+                        id="apellidos_landing">
+                </div>
+                <p id="error_apellidos"></p>
+            </fieldset>
+
+            
+            <fieldset>
+                <legend class="d-none">Localidad obligatoria</legend>
+                <div class="input_group">
+                    <label for="localidad" class="d-none">Localidad obligatoria</label>
+                    <input type="text"
+                        name="localidad"
+                        class="form-control"
+                        placeholder="Localidad"
+                        id="localidad_landing">
+                </div>
+                <p id="error_localidad"></p> 
+            </fieldset>
+
+            <fieldset>
+                <legend class="d-none">Municipio obligatoria</legend>
+                <div class="input_group">
+                    <label for="municipio" class="d-none">Municipio obligatoria</label>
+                    <input type="text"
+                        name="municipio"
+                        class="form-control"
+                        placeholder="Municipio"
+                        id="municipio_landing">
+                </div>
+                <p id="error_municipio"></p> 
+            </fieldset>
+
+            <fieldset>
+                <legend class="d-none">Codigo Postal obligatoria</legend>
+                <div class="input_group">
+                    <label for="CodPost" class="d-none">Codigo Postal obligatoria</label>
+                    <input type="number"
+                        name="CodPost"
+                        class="form-control"
+                        placeholder="Codigo Postal"
+                        id="CodPost_landing">
+                </div>
+                <p id="error_CodPost"></p> 
+            </fieldset>
+
+            <fieldset>
+                <legend class="d-none">Notificaciones y subcripcion</legend>
+                <label class="check_group">
+                    <input type="checkbox"
+                        name="suscribirse"
+                        id="suscribirse_landing">
+                    Quiero suscribirme y recibir informacion 
+                </label>
+                <br>
+                <label class="check_group">
+                    <input type="checkbox"
+                        name="notificaciones"
+                        id="notificaciones_landing">
+                    Quiero recibir notificaciones acerca de nuevos ofertas
+                </label>
+            </fieldset>
+
+            <fieldset class="d-flex justify-content-center">
+                <button type="submit" 
+                        class="btn btn-warning">
+                        Enviar
+                </button>
+            </fieldset>
+
+        </form>
+    </div>
+</div>
