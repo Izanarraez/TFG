@@ -12,6 +12,9 @@ import { landingRoutingModule } from './landing-routing.module';
   imports: [
     CommonModule,
     landingRoutingModule
+  ],
+  exports:[
+    LandingComponent
   ]
 })
 export class LandingModule { }

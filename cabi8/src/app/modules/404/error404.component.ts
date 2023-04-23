@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { servicescriptService } from 'src/app/services/services.service';
 
 @Component({
   selector: 'app-error404',
@@ -7,7 +6,5 @@ import { servicescriptService } from 'src/app/services/services.service';
   styleUrls: ['./error404.component.css']
 })
 export class Error404Component {
-  constructor(private servicescriptService: servicescriptService) {
-    this.servicescriptService.loadScript();
-  }
+
 }
