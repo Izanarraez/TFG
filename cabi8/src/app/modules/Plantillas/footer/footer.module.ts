@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FooterComponent } from './footer.component';
 import { FooterRoutingModule } from './footer-routing.module';
 
-
+import {MatIconModule} from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,12 @@ import { FooterRoutingModule } from './footer-routing.module';
   ],
   imports: [
     CommonModule,
-    FooterRoutingModule
+    FooterRoutingModule,
+    MatIconModule,
+    HttpClientModule
+  ],
+  exports:[
+    FooterComponent
   ]
 })
 export class FooterModule { }
