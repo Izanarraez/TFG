@@ -1,18 +1,10 @@
-[
-    {
-        "1":[
-            {
-                "codigo": "",
-                "precio": 0.0,
-                "strock": 0,
-                "descripción": "",
-                "foto":"",
-                "descuento":true
-            },
-            {
-                "codigo":0,
-                "nombre":""
-            }
-        ]
-    }
-]
+{
+    "":{
+            "codigo": "",
+            "precio": 0.0,
+            "strock": 0,
+            "descripción": "",
+            "foto":"",
+            "descuento":true
+        }
+}  
