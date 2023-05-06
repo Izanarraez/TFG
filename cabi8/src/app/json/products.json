@@ -1,10 +1,14 @@
 {
-    "":{
-            "codigo": "",
-            "precio": 0.0,
-            "strock": 0,
-            "descripción": "",
-            "foto":"",
-            "descuento":true
+    "motores":[
+        {
+            "codigo":{
+                "nombre":"",
+                "precio": 0.0,
+                "strock": 0,
+                "descripción": [],
+                "caracteristicas":[],
+                "foto":""
+            }
         }
+    ]
 }  
