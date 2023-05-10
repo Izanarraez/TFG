@@ -1,0 +1,17 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+footer{
+    margin-top: auto;
+}
+
+.d-link{
+    text-decoration: none;
+    color: black;
+}
+
+.d-ordenar{
+    height: 50px;
+}

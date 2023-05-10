@@ -18,62 +18,62 @@ const regex = {
     apellidos : /^[A-Za-z]{3,40}$/,
     email: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
     cp: /^[0-9]{5}$/,
-    telefono: /[0-9]/
+    telefono: /^[0-9]{9,12}$/
 }
 
 const paises = [
-    { "name": "Aland Islands", "code": "AX" },
+    { "name": "Islas Aland", "code": "AX" },
     { "name": "Albania", "code": "AL" },
     { "name": "Andorra", "code": "AD" },
     { "name": "Austria", "code": "AT" },
-    { "name": "Belarus", "code": "BY" },
-    { "name": "Belgium", "code": "BE" },
-    { "name": "Bosnia and Herzegovina", "code": "BA" },
+    { "name": "Bielorrusia", "code": "BY" },
+    { "name": "Belgica", "code": "BE" },
+    { "name": "Bosnia y Herzegovina", "code": "BA" },
     { "name": "Bulgaria", "code": "BG" },
-    { "name": "Croatia", "code": "HR" },
-    { "name": "Czech Republic", "code": "CZ" },
-    { "name": "Denmark", "code": "DK" },
+    { "name": "Croacia", "code": "HR" },
+    { "name": "República Checa", "code": "CZ" },
+    { "name": "Dinamarca", "code": "DK" },
     { "name": "Estonia", "code": "EE" },
-    { "name": "Faroe Islands", "code": "FO" },
-    { "name": "Finland", "code": "FI" },
-    { "name": "France", "code": "FR" },
-    { "name": "Germany", "code": "DE" },
+    { "name": "Islas Faroe", "code": "FO" },
+    { "name": "Finlandia", "code": "FI" },
+    { "name": "Francia", "code": "FR" },
+    { "name": "Alemania", "code": "DE" },
     { "name": "Gibraltar", "code": "GI" },
-    { "name": "Greece", "code": "GR" },
+    { "name": "Grecia", "code": "GR" },
     { "name": "Guernsey", "code": "GG" },
-    { "name": "Holy See (Vatican City State)", "code": "VA" },
-    { "name": "Hungary", "code": "HU" },
-    { "name": "Iceland", "code": "IS" },
-    { "name": "Ireland", "code": "IE" },
-    { "name": "Isle of Man", "code": "IM" },
-    { "name": "Italy", "code": "IT" },
+    { "name": "Ciudad del Baticano", "code": "VA" },
+    { "name": "Hungría", "code": "HU" },
+    { "name": "Islandia", "code": "IS" },
+    { "name": "Irlanda", "code": "IE" },
+    { "name": "Isla de Man", "code": "IM" },
+    { "name": "Italia", "code": "IT" },
     { "name": "Jersey", "code": "JE" },
     { "name": "Kosovo", "code": "XK" },
-    { "name": "Latvia", "code": "LV" },
+    { "name": "Letonia", "code": "LV" },
     { "name": "Liechtenstein", "code": "LI" },
-    { "name": "Lithuania", "code": "LT" },
-    { "name": "Luxembourg", "code": "LU" },
-    { "name": "Macedonia, the Former Yugoslav Republic of", "code": "MK" },
+    { "name": "Lituania", "code": "LT" },
+    { "name": "Luxerburgo", "code": "LU" },
+    { "name": "Macedonia", "code": "MK" },
     { "name": "Malta", "code": "MT" },
-    { "name": "Moldova, Republic of", "code": "MD" },
+    { "name": "Moldavía, Republic of", "code": "MD" },
     { "name": "Monaco", "code": "MC" },
     { "name": "Montenegro", "code": "ME" },
-    { "name": "Netherlands", "code": "NL" },
-    { "name": "Norway", "code": "NO" },
-    { "name": "Poland", "code": "PL" },
+    { "name": "Países Bajos", "code": "NL" },
+    { "name": "Noruega", "code": "NO" },
+    { "name": "Polonia", "code": "PL" },
     { "name": "Portugal", "code": "PT" },
-    { "name": "Romania", "code": "RO" },
+    { "name": "Rumania", "code": "RO" },
     { "name": "San Marino", "code": "SM" },
     { "name": "Serbia", "code": "RS" },
     { "name": "Serbia and Montenegro", "code": "CS" },
     { "name": "Slovakia", "code": "SK" },
     { "name": "Slovenia", "code": "SI" },
-    { "name": "Spain", "code": "ES" },
+    { "name": "España", "code": "ES" },
     { "name": "Svalbard and Jan Mayen", "code": "SJ" },
-    { "name": "Sweden", "code": "SE" },
-    { "name": "Switzerland", "code": "CH" },
-    { "name": "Ukraine", "code": "UA" },
-    { "name": "United Kingdom", "code": "GB" }
+    { "name": "Suecia", "code": "SE" },
+    { "name": "Suiza", "code": "CH" },
+    { "name": "Ucrania", "code": "UA" },
+    { "name": "Reino Unido", "code": "GB" }
   ];
 
   function generarPaises() {
@@ -104,6 +104,12 @@ const validar = function(e){
         return false;
     }
 
+    if(!validarPais()){
+        pais.focus();
+        e.preventDefault();
+        return false;
+    }
+
     if(!validarCP()){
         cp.focus();
         e.preventDefault();
@@ -116,7 +122,7 @@ const validar = function(e){
         return false;
     }
 
-    
+    alert('Se a completado el envio');
 }
 
 const comprobarNombre = (valor)=>{
@@ -170,6 +176,20 @@ const validarEmail = ()=>{
     if(!comprobarEmail(email.value)){
         let mensaje = "El email esta mal formado o esta vacio";
         error_email.innerHTML = mensaje;
+        return false;
+    }
+    else{
+        return true;
+    }
+}
+
+const validarPais = ()=>{
+
+    error_pais.innerHTML = "";
+
+    if(pais.value == "País"){
+        let mensaje = "Selecciona un país";
+        error_pais.innerHTML = mensaje;
         return false;
     }
     else{
