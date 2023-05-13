@@ -12,18 +12,54 @@
 
     <app-navbar></app-navbar>
 
-    <section class="container-fluid">
+    <section class="container-fluid mt-5">
         <div class="row">
-            <div class="col-12 col-md-6">
-                <img src="assets/img/mecanico.jpg" class="img-fluid">
+            <div class="col-12 col-md-6 d-flex justify-content-center">
+                <img src="assets/img/macanico.jpg" class="img-fluid w-75">
             </div>
             <div class="col-12 col-md-6">
-                <h5>Contacto</h5>
+                <h3 class="text-center">Contacto</h3>
                 <form action="">
-                    <input type="text">
-                    <input type="text">
-                    <input type="email">
-                    
+                    <fieldset class="row my-md-3">
+                        <fieldset class="col-12 col-md-6 my-3 my-md-0">
+                            <legend>Nombre</legend>
+                            <label for="contacto_nombre" class="d-none">Nombre</label>
+                            <input type="text" 
+                                   name="contacto_nombre" 
+                                   id="contacto_nombre" 
+                                   placeholder="Nombre" 
+                                   class="form-control">
+                        </fieldset>
+                        <fieldset class="col-12 col-md-6 my-3 my-md-0">
+                            <legend>Apellidos</legend>
+                            <label for="contacto_apellidos" class="d-none">Apellidos</label>
+                            <input type="text" 
+                                   name="contacto_apellidos" 
+                                   id="contacto_apellidos" 
+                                   placeholder="Apellidos" 
+                                   class="form-control">
+                        </fieldset>
+                    </fieldset>
+                    <fieldset class="col-12 my-3">
+                        <legend>Email</legend>
+                        <label for="contacto_email" class="d-none">Email</label>
+                        <input type="text" 
+                               name="contacto_email" 
+                               id="contacto_email" 
+                               placeholder="Email" 
+                               class="form-control">
+                    </fieldset>
+                    <fieldset class="col-12 my-3">
+                        <legend>Preguntas o dudas</legend>
+                        <textarea 
+                                  name="contacto_area"
+                                  id="contacto_area"
+                                  class="form-control">
+                        </textarea>
+                    </fieldset> 
+                    <fieldset class="col-12 d-flex justify-content-center my-3">
+                        <button type="submit" class="btn btn-warning">Enviar</button>
+                    </fieldset> 
                 </form>
             </div>
         </div>

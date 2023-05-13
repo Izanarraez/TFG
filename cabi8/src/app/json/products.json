@@ -10,5 +10,89 @@
                 "foto":""
             }
         }
+    ],
+    "frenado":[
+        {
+            "codigo":{
+                "nombre":"",
+                "precio": 0.0,
+                "strock": 0,
+                "descripción": [],
+                "caracteristicas":[],
+                "foto":""
+            }
+        }
+    ],
+    "embrague":[
+        {
+            "codigo":{
+                "nombre":"",
+                "precio": 0.0,
+                "strock": 0,
+                "descripción": [],
+                "caracteristicas":[],
+                "foto":""
+            }
+        }
+    ],
+    "escape":[
+        {
+            "codigo":{
+                "nombre":"",
+                "precio": 0.0,
+                "strock": 0,
+                "descripción": [],
+                "caracteristicas":[],
+                "foto":""
+            }
+        }
+    ],
+    "ruedas":[
+        {
+            "codigo":{
+                "nombre":"",
+                "precio": 0.0,
+                "strock": 0,
+                "descripción": [],
+                "caracteristicas":[],
+                "foto":""
+            }
+        }
+    ],
+    "carroceria":[
+        {
+            "codigo":{
+                "nombre":"",
+                "precio": 0.0,
+                "strock": 0,
+                "descripción": [],
+                "caracteristicas":[],
+                "foto":""
+            }
+        }
+    ],
+    "accesorios":[
+        {
+            "codigo":{
+                "nombre":"",
+                "precio": 0.0,
+                "strock": 0,
+                "descripción": [],
+                "caracteristicas":[],
+                "foto":""
+            }
+        }
+    ],
+    "climatizacion":[
+        {
+            "codigo":{
+                "nombre":"",
+                "precio": 0.0,
+                "strock": 0,
+                "descripción": [],
+                "caracteristicas":[],
+                "foto":""
+            }
+        }
     ]
 }  
