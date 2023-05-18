@@ -29,3 +29,10 @@ footer{
     min-height: auto;
     /*height: 500px;*/
 }
+
+.bg-mecanico{
+    background-image: url(../../../assets/img/mecanico.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 20vh;
+}

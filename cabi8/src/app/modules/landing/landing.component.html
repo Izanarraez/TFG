@@ -1,133 +1,135 @@
-<div class="row">
-    <div class="col-12 col-md-6">
-        <div id="carouselExampleAutoplaying" class="carousel carousel-dark slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="assets/img/robot.png" class="d-block w-100" alt="...">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div id="carouselExampleAutoplaying" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/img/robot.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/robot.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/robot.png" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
               </div>
-              <div class="carousel-item">
-                <img src="assets/img/robot.png" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="assets/img/robot.png" class="d-block w-100" alt="...">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-    </div>
-    <div class="col-12 col-md-6">
-        <h1 class="text-center mt-2">CABI8</h1>
-        <form action="" id="form_landing"> <!--method="POST"-->
-            <div class="row">
-                <fieldset class="col-12 col-md-6 mt-2">
-                    <legend>Nombre *</legend>
-                    <div class="input_group">
-                        <label for="nombre" class="d-none">Nombre obligatorio</label>
-                        <input type="text"
-                            name="nombre"
-                            class="form-control"
-                            placeholder="Nombre"
-                            id="nombre_landing">
-                    </div>
-                    <p id="error_nombre" class="text-danger"></p>
-                </fieldset>
-                
-                <fieldset class="col-12 col-md-6 mt-2">
-                    <legend>Apellidos *</legend>
-                    <div class="input_group">
-                        <label for="apellidos" class="d-none">Apellidos obligatorio</label>
-                        <input type="text"
-                            name="apellidos"
-                            class="form-control"
-                            placeholder="Apellidos"
-                            id="apellidos_landing">
-                    </div>
-                    <p id="error_apellidos" class="text-danger"></p>
-                </fieldset>
-
-                <fieldset class="col-12 mt-2">
-                    <legend>Email *</legend>
-                    <div class="input_group">
-                        <label for="email" class="d-none">Email obligatorio</label>
-                        <input type="text"
-                            name="email"
-                            class="form-control"
-                            placeholder="Email"
-                            id="email_landing">
-                    </div>
-                    <p id="error_email" class="text-danger"></p>
-                </fieldset>
-                
-                <fieldset class="col-12 col-md-6 mt-2">
-                    <legend>Pais *</legend>
-                    <label for="pais_landing" class="d-none">Pais obligatorio</label>
-                    <select class="form-control" name="pais" id="pais_landing">
-                    </select>
-                    <p id="error_pais" class="text-danger"></p> 
-                </fieldset>
-
-                <fieldset class="col-12 col-md-6 mt-2">
-                    <legend>Codigo Postal *</legend>
-                    <div class="input_group">
-                        <label for="CodPost" class="d-none">Codigo Postal obligatoria</label>
-                        <input type="number"
-                            name="CodPost"
-                            class="form-control"
-                            placeholder="Codigo Postal"
-                            id="CodPost_landing">
-                    </div>
-                    <p id="error_CodPost" class="text-danger"></p> 
-                </fieldset>
-
-                <fieldset class="col-12 mt-2">
-                    <legend>Telefono *</legend>
-                    <div class="input_group">
-                        <label for="telefono" class="d-none">Telefono obligatoria</label>
-                        <input type="text"
-                            name="telefono"
-                            class="form-control"
-                            placeholder="Telefono"
-                            id="telefono_landing">
-                    </div>
-                    <p id="error_telefono" class="text-danger"></p> 
-                </fieldset>
-
-                <fieldset class="mt-2">
-                    <legend class="d-none">Notificaciones y subcripcion</legend>
-                    <label class="check_group mt-2">
-                        <input type="checkbox"
-                            name="suscribirse"
-                            id="suscribirse_landing">
-                        Quiero suscribirme y recibir informacion 
-                    </label>
-                    <br>
-                    <label class="check_group mt-2">
-                        <input type="checkbox"
-                            name="notificaciones"
-                            id="notificaciones_landing">
-                        Quiero recibir notificaciones acerca de nuevos ofertas
-                    </label>
-                </fieldset>
-
-                <fieldset class="d-flex justify-content-center mt-5">
-                    <p class="text-warning">Los campos con * son obligatorios</p>
-                </fieldset>
-
-                <fieldset class="d-flex justify-content-center mt-5">
-                    <button type="submit" 
-                            class="btn btn-warning"
-                            id="boton_landing">
-                            Enviar
-                    </button>
-                </fieldset>
-            </div>
-        </form>
-    </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <h1 class="text-center mt-2">CABI8</h1>
+            <form action="" id="form_landing"> <!--method="POST"-->
+                <div class="row">
+                    <fieldset class="col-12 col-md-6 mt-2">
+                        <legend>Nombre *</legend>
+                        <div class="input_group">
+                            <label for="nombre" class="d-none">Nombre obligatorio</label>
+                            <input type="text"
+                                name="nombre"
+                                class="form-control"
+                                placeholder="Nombre"
+                                id="nombre_landing">
+                        </div>
+                        <p id="error_nombre" class="text-danger"></p>
+                    </fieldset>
+                    
+                    <fieldset class="col-12 col-md-6 mt-2">
+                        <legend>Apellidos *</legend>
+                        <div class="input_group">
+                            <label for="apellidos" class="d-none">Apellidos obligatorio</label>
+                            <input type="text"
+                                name="apellidos"
+                                class="form-control"
+                                placeholder="Apellidos"
+                                id="apellidos_landing">
+                        </div>
+                        <p id="error_apellidos" class="text-danger"></p>
+                    </fieldset>
+    
+                    <fieldset class="col-12 mt-2">
+                        <legend>Email *</legend>
+                        <div class="input_group">
+                            <label for="email" class="d-none">Email obligatorio</label>
+                            <input type="text"
+                                name="email"
+                                class="form-control"
+                                placeholder="Email"
+                                id="email_landing">
+                        </div>
+                        <p id="error_email" class="text-danger"></p>
+                    </fieldset>
+                    
+                    <fieldset class="col-12 col-md-6 mt-2">
+                        <legend>Pais *</legend>
+                        <label for="pais_landing" class="d-none">Pais obligatorio</label>
+                        <select class="form-control" name="pais" id="pais_landing">
+                        </select>
+                        <p id="error_pais" class="text-danger"></p> 
+                    </fieldset>
+    
+                    <fieldset class="col-12 col-md-6 mt-2">
+                        <legend>Codigo Postal *</legend>
+                        <div class="input_group">
+                            <label for="CodPost" class="d-none">Codigo Postal obligatoria</label>
+                            <input type="number"
+                                name="CodPost"
+                                class="form-control"
+                                placeholder="Codigo Postal"
+                                id="CodPost_landing">
+                        </div>
+                        <p id="error_CodPost" class="text-danger"></p> 
+                    </fieldset>
+    
+                    <fieldset class="col-12 mt-2">
+                        <legend>Telefono *</legend>
+                        <div class="input_group">
+                            <label for="telefono" class="d-none">Telefono obligatoria</label>
+                            <input type="text"
+                                name="telefono"
+                                class="form-control"
+                                placeholder="Telefono"
+                                id="telefono_landing">
+                        </div>
+                        <p id="error_telefono" class="text-danger"></p> 
+                    </fieldset>
+    
+                    <fieldset class="mt-2">
+                        <legend class="d-none">Notificaciones y subcripcion</legend>
+                        <label class="check_group mt-2">
+                            <input type="checkbox"
+                                name="suscribirse"
+                                id="suscribirse_landing">
+                            Quiero suscribirme y recibir informacion 
+                        </label>
+                        <br>
+                        <label class="check_group mt-2">
+                            <input type="checkbox"
+                                name="notificaciones"
+                                id="notificaciones_landing">
+                            Quiero recibir notificaciones acerca de nuevos ofertas
+                        </label>
+                    </fieldset>
+    
+                    <fieldset class="d-flex justify-content-center mt-5">
+                        <p class="text-warning">Los campos con * son obligatorios</p>
+                    </fieldset>
+    
+                    <fieldset class="d-flex justify-content-center mt-5">
+                        <button type="submit" 
+                                class="btn btn-warning"
+                                id="boton_landing">
+                                Enviar
+                        </button>
+                    </fieldset>
+                </div>
+            </form>
+        </div>
+    </div>    
 </div>
