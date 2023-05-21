@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\usuario;
 use App\Http\Controllers\Controller;
+use App\Models\Usuarios;
 use Illuminate\Http\Request;
 
 class UsuarioController extends Controller
@@ -13,7 +13,8 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        //
+        $usuarios = Usuarios::all();
+        return response()->json($usuarios,200);
     }
 
     /**
@@ -29,21 +30,23 @@ class UsuarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $usuarios = Usuarios::create($request->all());
+        return response()->json($usuarios,201);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(usuario $usuario)
+    public function show($id)
     {
-        //
+        $usuarios = Usuarios::findOrFail($id);
+        return response()->json($usuarios);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(usuario $usuario)
+    public function edit(Usuarios $usuario)
     {
         //
     }
@@ -51,16 +54,20 @@ class UsuarioController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, usuario $usuario)
+    public function update(Request $request, $id)
     {
-        //
+        $usuarios = Usuarios::findOrFail($id);
+        $usuarios->update($request->all());
+        return response()->json($usuarios);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(usuario $usuario)
+    public function destroy($id)
     {
-        //
+        $usuarios = Usuarios::findOrFail($id);
+        $usuarios->delete();
+        return response()->json(null,204);
     }
 }

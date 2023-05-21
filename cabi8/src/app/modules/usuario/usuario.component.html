@@ -1,0 +1,17 @@
+<h2>Items</h2>
+
+<form (ngSubmit)="saveUsuario()">
+  <div>
+    <label>nombre:</label>
+    <input type="text" [(ngModel)]="currentUsuario.nombre" name="nombre" required>
+  </div>
+  <button type="submit" [disabled]="!currentUsuario.nombre">Save</button>
+</form>
+
+<ul>
+  <li *ngFor="let us of usuario">
+    <span>{{ us.nombre }}</span>
+    <button (click)="editUsuario(us)">Edit</button>
+    <button (click)="deleteUsuario(us.id)">Delete</button>
+  </li>
+</ul>
