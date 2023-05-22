@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/usuarios', 'UsuarioController@index');
-Route::post('/usuarios', 'ItemController@store');
-Route::get('/usuarios/{id}', 'ItemController@show');
-Route::put('/usuarios/{id}', 'ItemController@update');
-Route::delete('/usuarios/{id}', 'ItemController@destroy');
+Route::get('/usuarios', [UsuarioController::class, 'index']);
+Route::post('/usuarios', [UsuarioController::class, 'store']);
+Route::get('/usuarios/{id}',[UsuarioController::class, 'show']);
+Route::put('/usuarios/{id}', [UsuarioController::class], 'update');
+Route::delete('/usuarios/{id}', [UsuarioController::class], 'destroy');
 
 /*Route::middleware('auth:sanctum')->get('/usuarios', function (Request $request) {
     return $request->Us();

@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Usuario } from './usuario';
 import { UsuariosService } from 'src/app/services/usuarios/usuarios.service';
 
 @Component({
-  selector: 'app-usuario',
-  templateUrl: './usuario.component.html',
-  styleUrls: ['./usuario.component.css']
+  selector: 'app-usuarios',
+  templateUrl: './usuarios.component.html',
+  styleUrls: ['./usuarios.component.css']
 })
-
-export class UsuarioComponent {
+export class UsuariosComponent implements OnInit{
+  
   usuario: Usuario[] = [];
 
   currentUsuario: Usuario = { id: 0, nombre: '', correo: '', tipo_usuario: 1, foto: ''};
