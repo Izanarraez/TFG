@@ -13,7 +13,6 @@ import { UsuariosService } from 'src/app/services/usuarios/usuarios.service';
   ],
   imports: [
     CommonModule,
-    UsuariosRoutingModule,
     FormsModule,
     ReactiveFormsModule
   ],
