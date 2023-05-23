@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from './usuario';
 import { UsuariosService } from 'src/app/services/usuarios/usuarios.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-usuarios',

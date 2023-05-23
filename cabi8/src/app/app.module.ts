@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { UsuariosRoutingModule } from './modules/usuarios/usuario-routing.module';
 
 @NgModule({
   declarations: [
@@ -15,12 +14,11 @@ import { UsuariosRoutingModule } from './modules/usuarios/usuario-routing.module
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     MatIconModule,
-    HttpClientModule,
     FormsModule,
-    ReactiveFormsModule,
-    UsuariosRoutingModule
+    ReactiveFormsModule
   ],
   exports:[],
   bootstrap: [AppComponent]

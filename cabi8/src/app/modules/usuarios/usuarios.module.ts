@@ -4,6 +4,8 @@ import { UsuariosComponent } from './usuarios.component';
 import { UsuariosRoutingModule } from './usuario-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UsuariosService } from 'src/app/services/usuarios/usuarios.service';
+import { HttpClient } from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
@@ -13,12 +15,9 @@ import { UsuariosService } from 'src/app/services/usuarios/usuarios.service';
   ],
   imports: [
     CommonModule,
-    UsuariosRoutingModule,
     FormsModule,
+    UsuariosRoutingModule,
     ReactiveFormsModule
-  ],
-  providers: [
-    UsuariosService
   ],
   exports: [
     UsuariosComponent
