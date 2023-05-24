@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajustes</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    
+    <app-navbar></app-navbar>
+
+    <section class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6 d-flex justify-content-center">
+                <img src="assets/img/beru.jpg" class="img-fluid w-50 rounded-circle"> 
+            </div>
+            <div class="col-12 col-md-6">
+                <form action="" id="form_registro">
+                    <div class="row justify-content-center">
+
+                        <fieldset class="col-12 col-md-12 mt-2">
+                            <legend>Nombre</legend>
+                            <div class="input_group">
+                                <label for="nombre" class="d-none">Nombre</label>
+                                <input type="text"
+                                    name="nombre"
+                                    class="form-control"
+                                    placeholder="Nombre"
+                                    id="nombre_ajustes">
+                            </div>
+                            <p id="error_nombre_ajustes" class="text-danger"></p>
+                        </fieldset>
+
+                        <fieldset class="col-12 col-md-12 mt-2">
+                            <legend>Contraseña</legend>
+                            <div class="input_group">
+                                <label for="contraseña" class="d-none">Contraseña</label>
+                                <input type="password"
+                                    name="contraseña"
+                                    class="form-control"
+                                    placeholder="Contraseña"
+                                    id="contraseña_ajustes">
+                            </div>
+                            <p id="error_contraseña_ajustes" class="text-danger"></p>
+                        </fieldset>
+
+                        <fieldset class="col-12 col-md-12 mt-2">
+                            <legend>Repetir Contraseña</legend>
+                            <div class="input_group">
+                                <label for="rContraseña" class="d-none">Repetir Contraseña</label>
+                                <input type="password"
+                                    name="rContraseña"
+                                    class="form-control"
+                                    placeholder="Repetir Contraseña"
+                                    id="rContraseña_ajustes">
+                            </div>
+                            <p id="error_rContraseña_ajustes" class="text-danger"></p>
+                        </fieldset>
+
+                        <fieldset class="col-12 col-md-12 mt-2">
+                            <legend>Foto</legend>
+                            <div class="input_group">
+                                <label for="foto" class="d-none">Foto</label>
+                                <input type="file"
+                                    name="foto"
+                                    class="form-control"
+                                    placeholder="Foto"
+                                    id="foto_ajustes">
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="col-12 d-flex justify-content-center my-3">
+                            <button type="submit" class="btn btn-warning d-flex justify-content-center" id="guardar_ajustes">Guardar</button>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+
+</body>
+</html>
