@@ -8,7 +8,10 @@ const routes: Routes = [
   {path: 'landing', loadChildren: ()=> import('./modules').then(m => m.LandingModule)},
   {path: 'productos', loadChildren: ()=> import('./modules').then(m => m.ProductosModule)},
   {path: 'contacto', loadChildren: ()=>import('./modules').then(m => m.ContactoModule)},
-  {path: 'usuarios', loadChildren: ()=>import('./modules').then(m => m.UsuariosModule)}
+  {path: 'usuarios', loadChildren: ()=>import('./modules').then(m => m.UsuariosModule)},
+  {path: 'acceso', loadChildren: ()=>import('./modules/Plantillas').then(m => m.AccesoModule)},
+  {path: 'registro', loadChildren: ()=>import('./modules/Plantillas').then(m => m.RegistroModule)},
+  {path: 'carrito', loadChildren: ()=>import('./modules').then(m => m.CarritoModule)}
 ];
 
 @NgModule({

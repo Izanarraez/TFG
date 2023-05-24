@@ -3,11 +3,19 @@ const registro = document.getElementById('registro');
 const acceso = document.getElementById('acceso');
 
 icono.addEventListener('click', () => {
-    registro.style.display = 'block';
-    acceso.style.display = 'block';
+
+    if(registro.style.display == 'none' && acceso.style.display == 'none'){
+        registro.style.display = 'block';
+        acceso.style.display = 'block';
+    }
+    else{
+        registro.style.display = 'none'
+        acceso.style.display = 'none';
+    }
+    
 });
 
-icono.addEventListener('down', () => {
+/*icono.addEventListener('mousedown', () => {
     registro.style.display = 'none';
     acceso.style.display = 'none';
-});
+});*/

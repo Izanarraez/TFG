@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from './usuario';
+import { Usuario } from '../../services/usuarios/usuario';
 import { UsuariosService } from 'src/app/services/usuarios/usuarios.service';
-import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-usuarios',
   templateUrl: './usuarios.component.html',
   styleUrls: ['./usuarios.component.css']
 })
+
 export class UsuariosComponent implements OnInit{
   
   usuario: Usuario[] = [];

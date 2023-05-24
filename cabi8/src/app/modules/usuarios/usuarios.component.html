@@ -5,9 +5,48 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-  <h2>Items</h2>
+  <app-navbar></app-navbar>
+
+  <section class="container-fluid">
+    <div class="row">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Tipo_usuario</th>
+            <th scope="col">Foto</th>
+            <th scope="col">
+              <button (click)="createUsuario()" class="btn btn-warning">Crear</button>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let us of usuario">
+            <th scope="row">{{us.id}}</th>
+            <td>{{us.nombre}}</td>
+            <td>{{us.correo}}</td>
+            <td>{{us.tipo_usuario}}</td>
+            <td>{{us.foto}}</td>
+            <td>
+              <button (click)="editUsuario(us)" class="btn btn-primary">Editar</button>
+              <button (click)="deleteUsuario(us.id)" class="btn btn-danger">Borrar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <app-footer></app-footer>
+</footer>
+  <!--<h2>Items</h2>
 
 <form (ngSubmit)="saveUsuario()">
   <div>
@@ -23,6 +62,6 @@
     <button (click)="editUsuario(us)">Edit</button>
     <button (click)="deleteUsuario(us.id)">Delete</button>
   </li>
-</ul>
+</ul>-->
 </body>
 </html>

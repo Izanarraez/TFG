@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UsuariosComponent } from './usuarios.component';
-import { UsuariosRoutingModule } from './usuario-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UsuariosService } from 'src/app/services/usuarios/usuarios.service';
-import { HttpClient } from '@angular/common/http';
-import { BrowserModule } from '@angular/platform-browser';
+import { UsuariosRoutingModule } from './usuario-routing.module';
+import { FooterModule, NavbarModule } from '../Plantillas';
 
 
 
@@ -16,12 +15,17 @@ import { BrowserModule } from '@angular/platform-browser';
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     UsuariosRoutingModule,
-    ReactiveFormsModule
+    NavbarModule,
+    FooterModule
+  ],
+  providers: [
+    UsuariosService
   ],
   exports: [
     UsuariosComponent
   ]
 })
 
-export class UsuariosModule { }
+export class UsuariosModule {}

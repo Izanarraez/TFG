@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CarritoComponent } from './modules/carrito/carrito.component';
 
 @NgModule({
   declarations: [
