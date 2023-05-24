@@ -12,7 +12,8 @@ const routes: Routes = [
   {path: 'acceso', loadChildren: ()=>import('./modules/Plantillas').then(m => m.AccesoModule)},
   {path: 'registro', loadChildren: ()=>import('./modules/Plantillas').then(m => m.RegistroModule)},
   {path: 'ajustes', loadChildren: ()=>import('./modules/Plantillas').then(m => m.AjustesModule)},
-  {path: 'carrito', loadChildren: ()=>import('./modules').then(m => m.CarritoModule)}
+  {path: 'carrito', loadChildren: ()=>import('./modules').then(m => m.CarritoModule)},
+  {path: 'producto', loadChildren: ()=>import('./modules').then(m => m.ProductoModule)}
 ];
 
 @NgModule({

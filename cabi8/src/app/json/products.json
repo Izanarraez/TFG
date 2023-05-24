@@ -34,12 +34,12 @@
     ],
     "escape":[
         {
-            "codigo":{
-                "nombre":"",
-                "precio": 0.0,
-                "strock": 0,
-                "caracteristicas":[],
-                "foto":""
+            "codigo"
+            "nombre":"",
+            "precio": 0.0,
+            "strock": 0,
+            "caracteristicas":[],
+            "foto":""
             }
         }
     ],
