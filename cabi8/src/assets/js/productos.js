@@ -149,7 +149,7 @@ function mostrar(elemento){
     return productos;
 }
 
-/*function aumentar(){
+function aumentar(){
     let numero = numero_unidades.value;
     alert(numero);
     numero_unidades = ++numero;
@@ -158,7 +158,7 @@ function mostrar(elemento){
 function disminuir(){
     let numero = numero_unidades.value;
     numero_unidades = --numero;
-}*/
+}
 
 
 document.getElementById('d-mas').addEventListener('click',aumentar);
