@@ -3,7 +3,6 @@
         {
                 "nombre":"Mercedes Benz OM 602",
                 "codigo":"0101M",
-                "descripción": [1,2,3],
                 "caracteristicas":[1,2,3],
                 "precio": 10.0,
                 "strock": 5,
@@ -12,7 +11,6 @@
         {
                 "nombre":"Mitsubishi 4G63",
                 "codigo":"0202M",
-                "descripción": [1,2,3],
                 "caracteristicas":[1,2,3],
                 "precio": 10.0,
                 "strock": 3,
@@ -21,7 +19,6 @@
         {       
                 "nombre":"BMW M60",
                 "codigo":"0303M",
-                "descripción": [1,2,3],
                 "caracteristicas":[1,2,3],
                 "precio": 45.0,
                 "strock": 5,
@@ -30,7 +27,6 @@
         {
                 "nombre":"Toyota 3SFE",
                 "codigo":"0404M",
-                "descripción": [1,2,3],
                 "caracteristicas":[1,2,3],
                 "precio": 65.0,
                 "strock": 5,
@@ -43,7 +39,6 @@
                 "nombre":"Mercedes Benz OM 602",
                 "precio": 10.0,
                 "strock": 5,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         },
@@ -52,7 +47,6 @@
                 "nombre":"Mitsubishi 4G63",
                 "precio": 0.0,
                 "strock": 0,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         },
@@ -61,7 +55,6 @@
                 "nombre":"BMW M60",
                 "precio": 0.0,
                 "strock": 0,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         },
@@ -70,7 +63,6 @@
                 "nombre":"Toyota 3SFE",
                 "precio": 0.0,
                 "strock": 0,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         }
@@ -81,7 +73,6 @@
                 "nombre":"Mercedes Benz OM 602",
                 "precio": 10.0,
                 "strock": 5,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         },
@@ -90,7 +81,6 @@
                 "nombre":"Mitsubishi 4G63",
                 "precio": 0.0,
                 "strock": 0,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         },
@@ -99,7 +89,6 @@
                 "nombre":"BMW M60",
                 "precio": 0.0,
                 "strock": 0,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         },
@@ -108,7 +97,6 @@
                 "nombre":"Toyota 3SFE",
                 "precio": 0.0,
                 "strock": 0,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         }
@@ -119,7 +107,6 @@
                 "nombre":"Mercedes Benz OM 602",
                 "precio": 10.0,
                 "strock": 5,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         },
@@ -128,7 +115,6 @@
                 "nombre":"Mitsubishi 4G63",
                 "precio": 0.0,
                 "strock": 0,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         },
@@ -137,7 +123,6 @@
                 "nombre":"BMW M60",
                 "precio": 0.0,
                 "strock": 0,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         },
@@ -146,7 +131,6 @@
                 "nombre":"Toyota 3SFE",
                 "precio": 0.0,
                 "strock": 0,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         }
@@ -157,7 +141,6 @@
                 "nombre":"Mercedes Benz OM 602",
                 "precio": 10.0,
                 "strock": 5,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         },
@@ -166,7 +149,6 @@
                 "nombre":"Mitsubishi 4G63",
                 "precio": 0.0,
                 "strock": 0,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         },
@@ -175,7 +157,6 @@
                 "nombre":"BMW M60",
                 "precio": 0.0,
                 "strock": 0,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         },
@@ -184,7 +165,6 @@
                 "nombre":"Toyota 3SFE",
                 "precio": 0.0,
                 "strock": 0,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         }
@@ -195,7 +175,6 @@
                 "nombre":"Mercedes Benz OM 602",
                 "precio": 10.0,
                 "strock": 5,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         },
@@ -204,7 +183,6 @@
                 "nombre":"Mitsubishi 4G63",
                 "precio": 0.0,
                 "strock": 0,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         },
@@ -213,7 +191,6 @@
                 "nombre":"BMW M60",
                 "precio": 0.0,
                 "strock": 0,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         },
@@ -222,7 +199,6 @@
                 "nombre":"Toyota 3SFE",
                 "precio": 0.0,
                 "strock": 0,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         }
@@ -233,7 +209,6 @@
                 "nombre":"Mercedes Benz OM 602",
                 "precio": 10.0,
                 "strock": 5,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         },
@@ -242,7 +217,6 @@
                 "nombre":"Mitsubishi 4G63",
                 "precio": 0.0,
                 "strock": 0,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         },
@@ -251,7 +225,6 @@
                 "nombre":"BMW M60",
                 "precio": 0.0,
                 "strock": 0,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         },
@@ -260,7 +233,6 @@
                 "nombre":"Toyota 3SFE",
                 "precio": 0.0,
                 "strock": 0,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         }
@@ -271,7 +243,6 @@
                 "nombre":"Mercedes Benz OM 602",
                 "precio": 10.0,
                 "strock": 5,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         },
@@ -280,7 +251,6 @@
                 "nombre":"Mitsubishi 4G63",
                 "precio": 0.0,
                 "strock": 0,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         },
@@ -289,7 +259,6 @@
                 "nombre":"BMW M60",
                 "precio": 0.0,
                 "strock": 0,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         },
@@ -298,7 +267,6 @@
                 "nombre":"Toyota 3SFE",
                 "precio": 0.0,
                 "strock": 0,
-                "descripción": [],
                 "caracteristicas":[],
                 "foto":"assets/img/frenado.jpg"
         }
