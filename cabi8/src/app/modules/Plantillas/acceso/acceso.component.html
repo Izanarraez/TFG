@@ -14,7 +14,7 @@
     <section class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-6">
-                <form action="" id="form_acceso">
+                <form (submit)="acceso()" method="post" id="form_acceso">
                     <div class="row justify-content-center">
                         <fieldset class="col-12 col-md-12 mt-2">
                             <legend>Correo</legend>
@@ -24,7 +24,8 @@
                                     name="correo"
                                     class="form-control"
                                     placeholder="Correo"
-                                    id="correo_acceso">
+                                    id="correo_acceso"
+                                    [(ngModel)] = "correo">
                             </div>
                             <p id="error_correo_acceso" class="text-danger"></p>
                         </fieldset>
@@ -36,7 +37,8 @@
                                     name="contraseña"
                                     class="form-control"
                                     placeholder="Contraseña"
-                                    id="contraseña_acceso">
+                                    id="contraseña_acceso"
+                                    [(ngModel)] = "contrase">
                             </div>
                             <p id="error_contraseña_acceso" class="text-danger"></p>
                         </fieldset>

@@ -3,5 +3,6 @@ export interface Usuario {
     nombre: String,
     correo: String,
     tipo_usuario: number,
-    foto: String
+    contraseña: string,
+    foto: String | null
 }

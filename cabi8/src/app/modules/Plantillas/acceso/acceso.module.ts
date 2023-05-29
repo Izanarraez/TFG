@@ -4,6 +4,7 @@ import { AccesoComponent } from './acceso.component';
 import { AccesoRoutingModule } from './acceso-routing.module';
 import { NavbarModule } from '../navbar';
 import { FooterModule } from '../footer';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +16,9 @@ import { FooterModule } from '../footer';
     CommonModule,
     AccesoRoutingModule,
     NavbarModule,
-    FooterModule
+    FooterModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     AccesoComponent

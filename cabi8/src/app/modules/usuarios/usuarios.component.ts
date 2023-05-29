@@ -11,7 +11,7 @@ import { UsuariosService } from 'src/app/services/usuarios/usuarios.service';
 
 export class UsuariosComponent implements OnInit{
   
-  usuario: Usuario[] = [];
+  /*usuario: Usuario[] = [];
 
   currentUsuario: Usuario = { id: 0, nombre: '', correo: '', tipo_usuario: 1, foto: ''};
   isEditMode = false;
@@ -69,5 +69,23 @@ export class UsuariosComponent implements OnInit{
           this.usuario = this.usuario.filter(us => us.id !== id);
         });
     }
+  }*/
+
+  constructor(private UsuariosService : UsuariosService){}
+
+  usuario : Usuario[] = [];
+
+  ngOnInit(): void {
+    this.UsuariosService.getUsuarios().subscribe((data: Usuario[])=>{
+      this.usuario = data;
+      console.log(this.usuario);
+    })
+  }
+
+  deleteUsuarios(id : any){
+    this.UsuariosService.deleteUsuario(id).subscribe(res => {
+         this.usuario = this.usuario.filter(item => item.id !== id);
+         console.log('Person deleted successfully!');
+    })
   }
 }

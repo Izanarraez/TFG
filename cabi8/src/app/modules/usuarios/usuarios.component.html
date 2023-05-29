@@ -31,8 +31,8 @@
             <td>{{us.tipo_usuario}}</td>
             <td>{{us.foto}}</td>
             <td>
-              <button (click)="editUsuario(us)" class="btn btn-primary">Editar</button>
-              <button (click)="deleteUsuario(us.id)" class="btn btn-danger">Borrar</button>
+              <a href="#" [routerLink]="[' /usuarios/ ',' editar ', us.id ]" class="btn btn-primary">Editar</a>
+              <button (click)="deleteUsuarios(us.id)" class="btn btn-danger">Borrar</button>
             </td>
           </tr>
         </tbody>

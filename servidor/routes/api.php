@@ -16,13 +16,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/usuarios', [UsuarioController::class, 'index']);
-Route::post('/usuarios', [UsuarioController::class, 'store']);
-Route::get('/usuarios/{id}',[UsuarioController::class, 'show']);
-Route::put('/usuarios/{id}', [UsuarioController::class], 'update');
-Route::delete('/usuarios/{id}', [UsuarioController::class], 'destroy');
+Route::prefix('usuarios')->group(function (){
+    Route::get('/', [UsuarioController::class, 'index']);
+    Route::post('/', [UsuarioController::class, 'create']);
+    Route::get('/{id}',[UsuarioController::class, 'get']);
+    Route::put('/{id}', [UsuarioController::class], 'update');
+    Route::delete('/{id}', [UsuarioController::class], 'destroy');
+});
 
-Route::post('/acceder', [Acceder::class, 'acceder']);
+Route::post('/registro', [RegistroController::class, 'store']);
+Route::post('/acceder', [AccesoController::class, 'store']);
+
 /*Route::middleware('auth:sanctum')->get('/usuarios', function (Request $request) {
     return $request->Us();
 });*/

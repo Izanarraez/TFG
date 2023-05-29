@@ -18,6 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('tipo_usuario');
             $table->string('foto');
             $table->timestamps();
+            $table->rememberToken();
 
             $table->foreign('tipo_usuario')->references('id')->on('tipo_usuarios');  
         });

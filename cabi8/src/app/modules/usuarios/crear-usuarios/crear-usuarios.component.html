@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <section class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <form (ngSubmit)="submit()" method="post" id="form_acceso">
+                    <div class="row justify-content-center">
+
+                        <fieldset class="col-12 col-md-12 mt-2">
+                            <legend>Nombre</legend>
+                            <div class="input_group">
+                                <label for="nombre" class="d-none">Nombre</label>
+                                <input type="text"
+                                    name="nombre"
+                                    class="form-control"
+                                    placeholder="Nombre"
+                                    id="nombre_crear_usuarios"
+                                    [(ngModel)] = "nombre">
+                            </div>
+                            <p id="error_nombre_crear_usuarios" class="text-danger"></p>
+                        </fieldset>
+
+                        <fieldset class="col-12 col-md-12 mt-2">
+                            <legend>Correo</legend>
+                            <div class="input_group">
+                                <label for="correo" class="d-none">Correo</label>
+                                <input type="text"
+                                    name="correo"
+                                    class="form-control"
+                                    placeholder="Correo"
+                                    id="correo_crear_usuarios"
+                                    [(ngModel)] = "correo">
+                            </div>
+                            <p id="error_crear_usuarios" class="text-danger"></p>
+                        </fieldset>
+
+                        <fieldset class="col-12 col-md-12 mt-2">
+                            <legend>Contraseña</legend>
+                            <div class="input_group">
+                                <label for="contraseña" class="d-none">Contraseña</label>
+                                <input type="text"
+                                    name="contraseña"
+                                    class="form-control"
+                                    placeholder="Contraseña"
+                                    id="contraseña_crear_usuarios"
+                                    [(ngModel)] = "contrase">
+                            </div>
+                            <p id="error_crear_usuarios" class="text-danger"></p>
+                        </fieldset>
+
+                        <fieldset class="col-12 col-md-12 mt-2">
+                            <legend>Repetir Contraseña</legend>
+                            <div class="input_group">
+                                <label for="rContraseña" class="d-none">Repetir Contraseña</label>
+                                <input type="text"
+                                    name="rContraseña"
+                                    class="form-control"
+                                    placeholder="Repetir contraseña"
+                                    id="rContraseña_crear_usuarios">
+                            </div>
+                            <p id="error_rContraseña_crear_usuarios" class="text-danger"></p>
+                        </fieldset>
+
+                        <fieldset class="col-12 col-md-12 mt-2">
+                            <legend>Foto</legend>
+                            <div class="input_group">
+                                <label for="foto" class="d-none">Foto</label>
+                                <input type="text"
+                                    name="foto"
+                                    class="form-control"
+                                    placeholder="Foto"
+                                    id="foto_crear_usuarios"
+                                    [(ngModel)] = "foto">
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="col-12 d-flex justify-content-center">
+                            <button type="submit" class="btn btn-warning d-flex justify-content-center" id="enviar_acceso">Enviar</button>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

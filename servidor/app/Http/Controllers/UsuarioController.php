@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Usuarios;
 use Illuminate\Http\Request;
-
 class UsuarioController extends Controller
 {
     /**
@@ -13,16 +12,25 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        $usuarios = Usuarios::all();
-        return response()->json($usuarios,200);
+        $data = Usuarios::all();
+        return response()->json($data, 200);
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $data['nombre'] = $request['nombre'];
+        $data['correo'] = $request['correo'];
+        $data['tipo_usuario'] = $request['tipo_usuario'];
+        $data['foto'] = $request['foto'];
+        
+        Usuarios::create($data);
+            return response()->json([
+            'message' => "Successfully created",
+            'success' => true
+      ], 200);
     }
 
     /**
@@ -56,9 +64,14 @@ class UsuarioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $usuarios = Usuarios::findOrFail($id);
-        $usuarios->update($request->all());
-        return response()->json($usuarios);
+        $data['nombre'] = $request['nombre'];
+        $data['correo'] = $request['correo'];
+        $data['foto'] = $request['foto'];
+        Usuarios::find($id)->update($data);
+        return response()->json([
+            'message' => "Successfully updated",
+            'success' => true
+        ], 200);
     }
 
     /**
@@ -66,8 +79,19 @@ class UsuarioController extends Controller
      */
     public function destroy($id)
     {
-        $usuarios = Usuarios::findOrFail($id);
-        $usuarios->delete();
-        return response()->json(null,204);
+        /*$res = Usuarios::find($id)->delete();
+        return response()->json([
+          'message' => "Successfully deleted",
+          'success' => true
+      ], 200);*/
+        $user = Usuarios::findOrFail($id);
+        $user->delete();
+
+        return response()->json(['message' => 'User deleted successfully']);
+    }
+
+    public function get($id){
+        $datos = Usuarios::find($id);
+        return response()->json($datos, 200);
     }
 }

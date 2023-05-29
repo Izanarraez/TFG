@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Acceder;
+use App\Http\Controllers\AccesoController;
+use App\Http\Controllers\RegistroController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::get('/usuarios',)*/
 Route::get('/', function () {
     return view('welcome');
 });

@@ -4,6 +4,7 @@ import { RegistroComponent } from './registro.component';
 import { RegistroRoutingModule } from './registro-routing.module';
 import { NavbarModule } from '../navbar';
 import { FooterModule } from '../footer';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +16,9 @@ import { FooterModule } from '../footer';
     CommonModule,
     RegistroRoutingModule,
     NavbarModule,
-    FooterModule
+    FooterModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     RegistroComponent

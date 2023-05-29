@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AccederService } from 'src/app/services/acceder/acceder.service';
+import { AccesoService } from 'src/app/services/acceso/acceso.service';
 
 @Component({
   selector: 'app-acceso',
@@ -9,11 +9,11 @@ import { AccederService } from 'src/app/services/acceder/acceder.service';
 export class AccesoComponent{
 
     correo!: string;
-    contraseña!: string;
+    contrase!: string;
 
-  constructor(private AccederService : AccederService){}
+  constructor(private AccesoService : AccesoService){}
 
   acceso(): void{
-    this.AccederService.acceder(this.correo,this.contraseña);
+    this.AccesoService.acceso(this.correo,this.contrase);
   }
 }

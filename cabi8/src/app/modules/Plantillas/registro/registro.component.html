@@ -15,7 +15,7 @@
     <section class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-6">
-                <form action="" id="form_registro">
+                <form (submit)="createUsuario()" method="post" id="form_registro">
                     <div class="row justify-content-center">
 
                         <fieldset class="col-12 col-md-12 mt-2">
@@ -26,7 +26,8 @@
                                     name="nombre"
                                     class="form-control"
                                     placeholder="Nombre"
-                                    id="nombre_registro">
+                                    id="nombre_registro"
+                                    [(ngModel)]="nombre">
                             </div>
                             <p id="error_nombre_registro" class="text-danger"></p>
                         </fieldset>
@@ -39,7 +40,8 @@
                                     name="correo"
                                     class="form-control"
                                     placeholder="Correo"
-                                    id="correo_registro">
+                                    id="correo_registro"
+                                    [(ngModel)]="correo">
                             </div>
                             <p id="error_correo_registro" class="text-danger"></p>
                         </fieldset>
@@ -52,7 +54,8 @@
                                     name="contraseña"
                                     class="form-control"
                                     placeholder="Contraseña"
-                                    id="contraseña_registro">
+                                    id="contraseña_registro"
+                                    [(ngModel)]="contrase">
                             </div>
                             <p id="error_contraseña_registro" class="text-danger"></p>
                         </fieldset>
@@ -78,7 +81,8 @@
                                     name="foto"
                                     class="form-control"
                                     placeholder="Foto"
-                                    id="foto_registro">
+                                    id="foto_registro"
+                                    [(ngModel)]="foto">
                             </div>
                         </fieldset>
 
