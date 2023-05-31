@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\Acceder;
 use App\Http\Controllers\UsuarioController;
-use Illuminate\Http\Request;
+use App\Http\Controllers\usuariosController;
 use Illuminate\Support\Facades\Route;
+Use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,17 +16,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('usuarios')->group(function (){
-    Route::get('/', [UsuarioController::class, 'index']);
-    Route::post('/', [UsuarioController::class, 'create']);
-    Route::get('/{id}',[UsuarioController::class, 'get']);
-    Route::put('/{id}', [UsuarioController::class], 'update');
-    Route::delete('/{id}', [UsuarioController::class], 'destroy');
-});
+Route::get('/usuarios', [usuariosController::class, 'index']);
+Route::post('/usuarios', [usuariosController::class, 'create']);
+Route::get('/usuarios/{id}',[usuariosController::class, 'get']);
+Route::put('/usuarios/{id}', [usuariosController::class, 'UpsateTipo_usuarios']);
+Route::delete('/usuarios/{id}', [usuariosController::class, 'destroy']);
 
 Route::post('/registro', [RegistroController::class, 'store']);
 Route::post('/acceder', [AccesoController::class, 'store']);
 
-/*Route::middleware('auth:sanctum')->get('/usuarios', function (Request $request) {
+/*Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->Us();
 });*/
