@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <app-navbar></app-navbar>
+
+    <section class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <form (submit)="acceso()" method="post" id="form_acceso">
+                    <div class="row justify-content-center">
+                        <fieldset class="col-12 col-md-12 mt-2">
+                            <legend>Correo</legend>
+                            <div class="input_group">
+                                <label for="correo" class="d-none">Correo</label>
+                                <input type="text"
+                                    name="correo"
+                                    class="form-control"
+                                    placeholder="Correo"
+                                    id="correo_acceso"
+                                    [(ngModel)] = "correo">
+                            </div>
+                            <p id="error_correo_acceso" class="text-danger"></p>
+                        </fieldset>
+                        <fieldset class="col-12 col-md-12 mt-2">
+                            <legend>Contraseña</legend>
+                            <div class="input_group">
+                                <label for="contraseña" class="d-none">Contraseña</label>
+                                <input type="text"
+                                    name="contraseña"
+                                    class="form-control"
+                                    placeholder="Contraseña"
+                                    id="contraseña_acceso"
+                                    [(ngModel)] = "contrasena">
+                            </div>
+                            <p id="error_contraseña_acceso" class="text-danger"></p>
+                        </fieldset>
+                        <fieldset class="col-12 d-flex justify-content-center">
+                            <button type="submit" class="btn btn-warning d-flex justify-content-center" id="enviar_acceso">Enviar</button>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+</body>
+</html>

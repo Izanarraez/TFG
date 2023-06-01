@@ -1,0 +1,43 @@
+[
+        {
+                "nombre":"Mercedes Benz OM 602",
+                "codigo":"0101M",
+                "caracteristicas":[1,2,3],
+                "precio": 10.0,
+                "strock": 5,
+                "ofertas": false,
+                "tipo": "motores",
+                "foto":"assets/img/frenado.jpg"
+        },
+        {
+                "nombre":"Mitsubishi 4G63",
+                "codigo":"0101M",
+                "caracteristicas":[1,2,3],
+                "precio": 10.0,
+                "strock": 5,
+                "ofertas": false,
+                "tipo": "motores",
+                "foto":"assets/img/frenado.jpg"
+        },
+        {       
+                "nombre":"BMW M60",
+                "codigo":"0101M",
+                "caracteristicas":[1,2,3],
+                "precio": 10.0,
+                "strock": 5,
+                "ofertas": false,
+                "tipo": "motores",
+                "foto":"assets/img/frenado.jpg"
+        },
+        {
+                "nombre":"Toyota 3SFE",
+                "codigo":"0101M",
+                "caracteristicas":[1,2,3],
+                "precio": 10.0,
+                "strock": 5,
+                "ofertas": false,
+                "tipo": "motores",
+                "foto":"assets/img/frenado.jpg"
+        }
+    
+]

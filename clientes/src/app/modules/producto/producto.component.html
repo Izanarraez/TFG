@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <app-navbar></app-navbar>
+
+    <section class="container-fluid">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Codigo</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Careacteristicas</th>
+                <th scope="col">Foto</th>
+                <th scope="col">
+                  <a href="#" class="btn btn-warning">Crear</a>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let objetos of listaProductos">
+                <th scope="row">{{objetos.codigo}}</th>
+                <td>{{objetos.nombre}}</td>
+                <td>{{objetos.precio}}</td>
+                <td>{{objetos.stock}}</td>
+                <td>{{objetos.caracteristicas}}</td>
+                <td>{{objetos.foto}}</td>
+                <td>
+                  <a href="#" class="btn btn-primary">Editar</a>
+                  <a href="#" class="btn btn-warning">Borrar</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </section>
+
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+</body>
+</html>

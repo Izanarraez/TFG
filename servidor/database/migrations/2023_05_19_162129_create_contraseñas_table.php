@@ -11,10 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('contraseñas', function (Blueprint $table) {
+        Schema::create('contraseña', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('contraseña');
-            $table->timestamps();
 
             $table->foreign('id')->references('id')->on('usuarios');
         });

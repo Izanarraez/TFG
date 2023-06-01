@@ -1,0 +1,14 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer{
+    margin-top: auto;
+}
+
+.d-img{
+    min-height: auto;
+    /*height: 500px;*/
+}
