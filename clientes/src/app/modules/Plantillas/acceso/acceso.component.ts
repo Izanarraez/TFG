@@ -1,19 +1,34 @@
 import { Component, OnInit } from '@angular/core';
-import { AccesoService } from 'src/app/services/acceso/acceso.service';
+import { FormControl, FormGroup } from '@angular/forms';
+import { UsuariosService } from 'src/app/services/usuarios/usuarios.service';
 
 @Component({
   selector: 'app-acceso',
   templateUrl: './acceso.component.html',
   styleUrls: ['./acceso.component.css']
 })
-export class AccesoComponent{
+export class AccesoComponent implements OnInit{
 
-    correo!: string;
-    contrasena!: string;
+    /*correo!: string;
+    contrasena!: string;*/
 
-  constructor(private AccesoService : AccesoService){}
+    form = {
+      correo: '',
+      contrasena: '',
+    };
+
+    user !: any;
+    isAdmin !: any;
+
+  constructor(private UsuariosService : UsuariosService){}
+  
+  ngOnInit(): void {
+  }
 
   acceso(): void{
-    this.AccesoService.acceso(this.correo,this.contrasena);
+    this.UsuariosService.autentidicateUsuario(this.form).
+    subscribe(datos => {
+      console.log(datos)
+    })
   }
 }

@@ -5,15 +5,15 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {path: '', pathMatch:'full', redirectTo: 'home'},
   {path: 'home', loadChildren: ()=> import('./modules').then(m => m.HomeModule)},
-  {path: 'landing', loadChildren: ()=> import('./modules').then(m => m.LandingModule)},
-  {path: 'productos', loadChildren: ()=> import('./modules').then(m => m.ProductosModule)},
-  {path: 'contacto', loadChildren: ()=>import('./modules').then(m => m.ContactoModule)},
-  {path: 'usuarios', loadChildren: ()=>import('./modules').then(m => m.UsuariosModule)},
-  {path: 'acceso', loadChildren: ()=>import('./modules/Plantillas').then(m => m.AccesoModule)},
-  {path: 'registro', loadChildren: ()=>import('./modules/Plantillas').then(m => m.RegistroModule)},
+  /*{path: 'landing', loadChildren: ()=> import('./modules').then(m => m.LandingModule)},*/
+  {path: 'products', loadChildren: ()=> import('./modules').then(m => m.ProductsModule)},
+  {path: 'contact', loadChildren: ()=>import('./modules').then(m => m.ContactModule)},
+  {path: 'users', loadChildren: ()=>import('./modules').then(m => m.UsersModule)},
+  {path: 'login', loadChildren: ()=>import('./modules/Plantillas').then(m => m.LoginModule)},
+  {path: 'signup', loadChildren: ()=>import('./modules/Plantillas').then(m => m.SignupModule)},
   {path: 'ajustes', loadChildren: ()=>import('./modules/Plantillas').then(m => m.AjustesModule)},
   {path: 'carrito', loadChildren: ()=>import('./modules').then(m => m.CarritoModule)},
-  {path: 'producto', loadChildren: ()=>import('./modules').then(m => m.ProductoModule)}
+  {path: 'product', loadChildren: ()=>import('./modules').then(m => m.ProductModule)}
 ];
 
 @NgModule({

@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { UsuariosModule } from './modules';
+import { UsersModule} from './modules';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { UsuariosModule } from './modules';
     AppRoutingModule,
     MatIconModule,
     FormsModule,
-    UsuariosModule,
+    UsersModule,
     ReactiveFormsModule
   ],
   exports:[],

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Tipo_usuario;
 use App\Models\Usuario;
+use App\Models\Usuarios;
 use Illuminate\Http\Request;
 
 class usuariosController extends Controller
@@ -23,16 +24,7 @@ class usuariosController extends Controller
      */
     public function create(Request $request)
     {
-        $data['nombre'] = $request['nombre'];
-        $data['correo'] = $request['correo'];
-        $data['tipo_usuario'] = $request['tipo_usuario'];
-        $data['foto'] = $request['foto'];
         
-        Usuario::create($data);
-            return response()->json([
-            'message' => "Successfully created",
-            'success' => true
-      ], 200);
     }
 
     /**
@@ -49,7 +41,7 @@ class usuariosController extends Controller
      */
     public function show(string $id)
     {
-        $usuarios = Usuario::findOrFail($id);
+        $usuarios = Usuarios::findOrFail($id);
         return response()->json($usuarios);  
     }
 
@@ -66,7 +58,7 @@ class usuariosController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $data['nombre'] = $request['nombre'];
+        /*$data['nombre'] = $request['nombre'];
         $data['correo'] = $request['correo'];
         $data['tipo_usuario'] = $request['tipo_usuario'];
         $data['foto'] = $request['foto'];
@@ -74,7 +66,10 @@ class usuariosController extends Controller
         return response()->json([
             'message' => "Successfully updated",
             'success' => true
-        ], 200);
+        ], 200);*/
+        $user = Usuarios::findOrFail($id);
+        $user->update($request->all());
+        return response()->json($user);
     }
 
     /**
@@ -82,22 +77,13 @@ class usuariosController extends Controller
      */
     public function destroy(string $id)
     {
-        $usuario = Usuario::findOrFail($id);
+        $usuario = Usuarios::findOrFail($id);
         $usuario->delete();
     }
 
-    public function get($id){
-        $datos = Usuario::find($id);
+    /*public function get($id){
+        $datos = Usuarios::find($id);
         return response()->json($datos, 200);
-    }
+    }*/
 
-    public function UpsateTipo_usuarios(Request $request, $id){
-        $usuario = Usuario::findOrFail($id);
-        $tipoUsuario = Tipo_usuario::findOrFail($request->input('tipo_usuario'));
-
-        $usuario->tipoUsuario()->associate($tipoUsuario);
-        $usuario->save();
-
-        return response()->json(['message' => 'Tipo de usuario modificado con éxito'], 200);
-    }
 }

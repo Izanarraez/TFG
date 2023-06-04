@@ -14,8 +14,9 @@
     <section class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-6">
-                <form (submit)="acceso()" method="post" id="form_acceso">
+                <form (ngSubmit)="acceso()" #accesoForm="ngForm" id="form_acceso">
                     <div class="row justify-content-center">
+
                         <fieldset class="col-12 col-md-12 mt-2">
                             <legend>Correo</legend>
                             <div class="input_group">
@@ -25,10 +26,11 @@
                                     class="form-control"
                                     placeholder="Correo"
                                     id="correo_acceso"
-                                    [(ngModel)] = "correo">
+                                    [(ngModel)]="form.correo">
                             </div>
                             <p id="error_correo_acceso" class="text-danger"></p>
                         </fieldset>
+
                         <fieldset class="col-12 col-md-12 mt-2">
                             <legend>Contraseña</legend>
                             <div class="input_group">
@@ -38,13 +40,15 @@
                                     class="form-control"
                                     placeholder="Contraseña"
                                     id="contraseña_acceso"
-                                    [(ngModel)] = "contrasena">
+                                    [(ngModel)]="form.contrasena">
                             </div>
                             <p id="error_contraseña_acceso" class="text-danger"></p>
                         </fieldset>
+
                         <fieldset class="col-12 d-flex justify-content-center">
                             <button type="submit" class="btn btn-warning d-flex justify-content-center" id="enviar_acceso">Enviar</button>
                         </fieldset>
+                        
                     </div>
                 </form>
             </div>

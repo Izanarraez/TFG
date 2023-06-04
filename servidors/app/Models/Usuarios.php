@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
+use App\Http\Middleware\Authenticate;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Sanctum\HasApiTokens;
 
 class Usuarios extends Model
 {
-    use HasFactory;
+    use HasFactory, HasApiTokens;
 
     protected $table = "usuarios";
 
@@ -19,4 +21,8 @@ class Usuarios extends Model
         'foto'
     ];
 
+    protected $hidden = [
+        'contrasena',
+        'remember_token'
+    ];
 }

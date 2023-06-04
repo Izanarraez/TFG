@@ -15,7 +15,7 @@
     <section class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-6">
-                <form (ngSubmit)="onSubmit()" id="form_registro">
+                <form (ngSubmit)="registrarUsuario(this.nombreUsuario.value,this.correoUsuario.value,this.contrasenaUsuario.value,this.fotoUsuario.value); nombreUsuario.value = ''; correoUsuario.value=''; contrasenaUsuario.value = ''; fotoUsuario.value = ''"  enctype="multipart/form-data" id="form_registro">
                     <div class="row justify-content-center">
 
                         <fieldset class="col-12 col-md-12 mt-2">
@@ -27,7 +27,7 @@
                                     class="form-control"
                                     placeholder="Nombre"
                                     id="nombre_registro"
-                                    [(ngModel)]="usuario.nombre">
+                                    #nombreUsuario>
                             </div>
                             <p id="error_nombre_registro" class="text-danger"></p>
                         </fieldset>
@@ -41,7 +41,7 @@
                                     class="form-control"
                                     placeholder="Correo"
                                     id="correo_registro"
-                                    [(ngModel)]="usuario.correo">
+                                    #correoUsuario>
                             </div>
                             <p id="error_correo_registro" class="text-danger"></p>
                         </fieldset>
@@ -55,7 +55,7 @@
                                     class="form-control"
                                     placeholder="Contraseña"
                                     id="contraseña_registro"
-                                    [(ngModel)]="usuario.contrasena">
+                                    #contrasenaUsuario>
                             </div>
                             <p id="error_contraseña_registro" class="text-danger"></p>
                         </fieldset>
@@ -82,7 +82,7 @@
                                     class="form-control"
                                     placeholder="Foto"
                                     id="foto_registro"
-                                    [(ngModel)]="usuario.foto">
+                                    #fotoUsuario>
                             </div>
                         </fieldset>
 

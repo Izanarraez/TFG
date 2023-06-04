@@ -1,4 +1,3 @@
-const icono = document.getElementById('icono');
 const registro = document.getElementById('registro');
 const acceso = document.getElementById('acceso');
 

@@ -1,8 +1,11 @@
 export interface Usuario {
-    id: number,
-    nombre: String,
-    correo: String,
-    tipo_usuario: number,
-    contrasena: string,
-    foto: String
+    id?: number,
+    name: string,
+    email: string,
+    type_user: string,
+    password: string,
+    photo?: string,
+    created_at?: string,
+    updated_at?: string,
+    remember_token?: string
 }
