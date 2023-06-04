@@ -122,7 +122,7 @@ const validar = function(e){
         return false;
     }
 
-    alert('Se a completado el envio');
+    alert('Se ha completado el envio');
 }
 
 const comprobarNombre = (valor)=>{

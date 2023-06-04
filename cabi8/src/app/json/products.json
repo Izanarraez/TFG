@@ -1,97 +1,55 @@
 {
-    "motores":[
+    "Productos":[
         {
-            "codigo":{
+            "1":{
+                "nombre":"1.0 eTSI de 110 CV",
+                "precio": 500.00,
+                "strock": 5,
+                "descripción": "Motor del grupo Vag, gasolina con 110 CV",
+                "caracteristicas":{
+                    "Potencia" : "110CV",
+                    "Combustible": "Gasolina",
+                    "Cilindrada" :	"999 cc",
+                    "Consumo medio" : "5.1l/100km"
+                },
+                "foto":"",
+                "tipo":""
+            },
+            "2":{
                 "nombre":"",
                 "precio": 0.0,
                 "strock": 0,
                 "descripción": [],
                 "caracteristicas":[],
-                "foto":""
-            }
-        }
-    ],
-    "frenado":[
-        {
-            "codigo":{
+                "foto":"",
+                "tipo":""
+            },
+            "3":{
                 "nombre":"",
                 "precio": 0.0,
                 "strock": 0,
                 "descripción": [],
                 "caracteristicas":[],
-                "foto":""
-            }
-        }
-    ],
-    "embrague":[
-        {
-            "codigo":{
+                "foto":"",
+                "tipo":""
+            },
+            "4":{
                 "nombre":"",
                 "precio": 0.0,
                 "strock": 0,
                 "descripción": [],
                 "caracteristicas":[],
-                "foto":""
-            }
-        }
-    ],
-    "escape":[
-        {
-            "codigo":{
+                "foto":"",
+                "tipo":""
+            },
+            "5":{
                 "nombre":"",
                 "precio": 0.0,
                 "strock": 0,
                 "descripción": [],
                 "caracteristicas":[],
-                "foto":""
-            }
-        }
-    ],
-    "ruedas":[
-        {
-            "codigo":{
-                "nombre":"",
-                "precio": 0.0,
-                "strock": 0,
-                "descripción": [],
-                "caracteristicas":[],
-                "foto":""
-            }
-        }
-    ],
-    "carroceria":[
-        {
-            "codigo":{
-                "nombre":"",
-                "precio": 0.0,
-                "strock": 0,
-                "descripción": [],
-                "caracteristicas":[],
-                "foto":""
-            }
-        }
-    ],
-    "accesorios":[
-        {
-            "codigo":{
-                "nombre":"",
-                "precio": 0.0,
-                "strock": 0,
-                "descripción": [],
-                "caracteristicas":[],
-                "foto":""
-            }
-        }
-    ],
-    "climatizacion":[
-        {
-            "codigo":{
-                "nombre":"",
-                "precio": 0.0,
-                "strock": 0,
-                "descripción": [],
-                "caracteristicas":[],
-                "foto":""
+                "foto":"",
+                "tipo":""
             }
         }
     ]
