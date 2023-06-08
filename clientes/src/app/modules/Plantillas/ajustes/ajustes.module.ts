@@ -5,6 +5,7 @@ import { AjustesRoutingModule } from './ajustes-routing.module';
 import { AjustesComponent } from './ajustes.component';
 import { NavbarModule } from '../navbar';
 import { FooterModule } from '../footer';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,9 @@ import { FooterModule } from '../footer';
     CommonModule,
     AjustesRoutingModule,
     NavbarModule,
-    FooterModule
+    FooterModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     AjustesComponent

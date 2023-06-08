@@ -20,7 +20,7 @@ import { UsersModule} from './modules';
     MatIconModule,
     FormsModule,
     UsersModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   exports:[],
   bootstrap: [AppComponent]

@@ -15,7 +15,7 @@
     <section class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-6">
-                <form (ngSubmit)="registrarUsuario(this.nameUser.value,this.emailUser.value,this.passwordUser.value,this.photoUser.value); nameUser.value = ''; emailUser.value=''; passwordUser.value = ''; photoUser.value = ''"  enctype="multipart/form-data" id="form_registro">
+                <form (ngSubmit)="registrarUsuario()" enctype="multipart/form-data" id="form_registro">
                     <div class="row justify-content-center">
 
                         <fieldset class="col-12 col-md-12 mt-2">
@@ -27,9 +27,9 @@
                                     class="form-control"
                                     placeholder="Nombre"
                                     id="nombre_registro"
-                                    #nameUser>
+                                    [(ngModel)]="usuarios.name">
                             </div>
-                            <p id="error_nombre_registro" class="text-danger"></p>
+                            <p id="error_nombre_registro" class="text-danger" [hidden]="!error.name">{{error.name}}</p>
                         </fieldset>
 
                         <fieldset class="col-12 col-md-12 mt-2">
@@ -41,9 +41,9 @@
                                     class="form-control"
                                     placeholder="Correo"
                                     id="correo_registro"
-                                    #emailUser>
+                                    [(ngModel)]="usuarios.email">
                             </div>
-                            <p id="error_correo_registro" class="text-danger"></p>
+                            <p id="error_correo_registro" class="text-danger" [hidden]="!error.email">{{error.email}}</p>
                         </fieldset>
 
                         <fieldset class="col-12 col-md-12 mt-2">
@@ -55,23 +55,11 @@
                                     class="form-control"
                                     placeholder="Contraseña"
                                     id="contraseña_registro"
-                                    #passwordUser>
+                                    [(ngModel)]="usuarios.password">
                             </div>
-                            <p id="error_contraseña_registro" class="text-danger"></p>
+                            <p id="error_contraseña_registro" class="text-danger" [hidden]="!error.password">{{error.password}}</p>
                         </fieldset>
 
-                       <!--<fieldset class="col-12 col-md-12 mt-2">
-                            <legend>Repetir Contraseña</legend>
-                            <div class="input_group">
-                                <label for="rContraseña" class="d-none">Repetir Contraseña</label>
-                                <input type="password"
-                                    name="rContraseña"
-                                    class="form-control"
-                                    placeholder="Repetir Contraseña"
-                                    id="rContraseña_registro">
-                            </div>
-                            <p id="error_rContraseña_registro" class="text-danger"></p>
-                        </fieldset>-->
 
                         <fieldset class="col-12 col-md-12 mt-2">
                             <legend>Foto</legend>
@@ -82,7 +70,7 @@
                                     class="form-control"
                                     placeholder="Foto"
                                     id="foto_registro"
-                                    #photoUser>
+                                    [(ngModel)]="usuarios.photo">
                             </div>
                         </fieldset>
 

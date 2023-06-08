@@ -82,11 +82,11 @@ class usersController extends Controller
 
         if(Users::where('id',$id)->exists()){
             $usuario = Users::find($id);
-            $usuario->nombre = $request->name;
-            $usuario->correo = $request->email;
-            $usuario->tipo_usuario = $request->type_user;
-            $usuario->contrasena = $request->password;
-            $usuario->foto = $request->photo;
+            $usuario->name = $request->name;
+            $usuario->email = $request->email;
+            $usuario->type_user = $request->type_user;
+            $usuario->password = $request->password;
+            $usuario->photo = $request->photo;
 
             $usuario->save();
 

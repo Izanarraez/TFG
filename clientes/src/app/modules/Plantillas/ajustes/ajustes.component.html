@@ -15,10 +15,10 @@
     <section class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6 d-flex justify-content-center">
-                <img src="assets/img/beru.jpg" class="img-fluid w-50 rounded-circle"> 
+                <img [src]="usu.photo" class="img-fluid w-50 rounded-circle"> 
             </div>
             <div class="col-12 col-md-6">
-                <form action="" id="form_registro">
+                <form (submit)="cambiar()" id="form_registro">
                     <div class="row justify-content-center">
 
                         <fieldset class="col-12 col-md-12 mt-2">
@@ -26,12 +26,27 @@
                             <div class="input_group">
                                 <label for="nombre" class="d-none">Nombre</label>
                                 <input type="text"
-                                    name="nombre"
+                                    name="name"
                                     class="form-control"
                                     placeholder="Nombre"
-                                    id="nombre_ajustes">
+                                    id="nombre_ajustes"
+                                    [(ngModel)]="form.name">
                             </div>
                             <p id="error_nombre_ajustes" class="text-danger"></p>
+                        </fieldset>
+
+                        <fieldset class="col-12 col-md-12 mt-2">
+                            <legend>Corre</legend>
+                            <div class="input_group">
+                                <label for="email" class="d-none">Corre</label>
+                                <input type="email"
+                                    name="email"
+                                    class="form-control"
+                                    placeholder="Correo"
+                                    id="correo_ajustes"
+                                    [(ngModel)]="form.email">
+                            </div>
+                            <p id="error_rContraseña_ajustes" class="text-danger"></p>
                         </fieldset>
 
                         <fieldset class="col-12 col-md-12 mt-2">
@@ -39,25 +54,13 @@
                             <div class="input_group">
                                 <label for="contraseña" class="d-none">Contraseña</label>
                                 <input type="password"
-                                    name="contraseña"
+                                    name="password"
                                     class="form-control"
                                     placeholder="Contraseña"
-                                    id="contraseña_ajustes">
+                                    id="contraseña_ajustes"
+                                    [(ngModel)]="form.password">
                             </div>
                             <p id="error_contraseña_ajustes" class="text-danger"></p>
-                        </fieldset>
-
-                        <fieldset class="col-12 col-md-12 mt-2">
-                            <legend>Repetir Contraseña</legend>
-                            <div class="input_group">
-                                <label for="rContraseña" class="d-none">Repetir Contraseña</label>
-                                <input type="password"
-                                    name="rContraseña"
-                                    class="form-control"
-                                    placeholder="Repetir Contraseña"
-                                    id="rContraseña_ajustes">
-                            </div>
-                            <p id="error_rContraseña_ajustes" class="text-danger"></p>
                         </fieldset>
 
                         <fieldset class="col-12 col-md-12 mt-2">
@@ -65,10 +68,11 @@
                             <div class="input_group">
                                 <label for="foto" class="d-none">Foto</label>
                                 <input type="file"
-                                    name="foto"
+                                    name="photo"
                                     class="form-control"
                                     placeholder="Foto"
-                                    id="foto_ajustes">
+                                    id="foto_ajustes"
+                                    (change)="onChanged($event)">
                             </div>
                         </fieldset>
 

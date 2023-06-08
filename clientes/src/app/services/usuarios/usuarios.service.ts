@@ -14,7 +14,7 @@ export class UsuariosService {
 
   private url_registro = 'http://127.0.0.1:8000/api/signup';
 
-  private url_acceso = 'http://127.0.0.1:8000/api/login';
+  /*private url_acceso = '';*/
 
   constructor(private http: HttpClient) {}
 
@@ -30,9 +30,9 @@ export class UsuariosService {
     return this.http.get<any>(this.url_usuarios)
   }
 
-  /*findUsuario(id: any): Observable<Usuario> {
-    return this.http.get<Usuario>(this.url_laravel + id)
-  }*/
+  findUsuario(id: any){
+    return this.http.get(this.url_usuarios+id)
+  }
 
   createUsuario(usuario: any): Observable<any>{
     return this.http.post<any>(this.url_usuarios, usuario, this.headers)
@@ -51,7 +51,7 @@ export class UsuariosService {
   }
 
   autentidicateUsuario(usuario:any): Observable<any> {
-    return this.http.post<any>(this.url_acceso,usuario, this.headers);
+    return this.http.post<any>('http://127.0.0.1:8000/api/login',usuario, this.headers);
   }
 
   /*ascendUsuarios(id: number, tipo_usuario : number){

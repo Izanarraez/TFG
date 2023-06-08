@@ -14,14 +14,14 @@
               <a class="nav-link text-end" href="../home">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-end" href="../users">Usuarios</a>
+              <a class="nav-link text-end" href="../users" *ngIf="isAdmin()">Usuarios</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-end" href="../contact">Contacto</a>
             </li>
-            <!--<li class="nav-item">
-              <a class="nav-link text-end" href="../landing">Landing</a>
-            </li>-->
+            <li class="nav-item">
+              <a class="nav-link text-end" href="../product" *ngIf="isAdmin()">Producto</a>
+            </li>
           </ul>
           <form class="d-flex" role="search">
             <input class="form-control me-2 d-search" type="search" placeholder="Search" aria-label="Search">
@@ -29,24 +29,27 @@
           </form>
           <div class="row w-100 justify-content-start mt-2 mt-md-0 ms-2">
             <div class="col-12 col-md-6 d-flex justify-content-end justify-content-md-start">
-              <a href="../carrito" class="btn btn-outline-success"><mat-icon>shopping_cart</mat-icon></a> 
-              <button class="btn btn-outline-success d-flex justify-content-center flex-wrap" id="icono">
+              <a href="../carrito" class="btn btn-outline-success" *ngIf="isUser()"><mat-icon>shopping_cart</mat-icon></a> 
+              <a href="../login" class="btn btn-outline-success mx-2" *ngIf="!loggedIn">Acceder</a> 
+              <a href="../signup" class="btn btn-outline-success mx-2" *ngIf="!loggedIn">Registrarse</a> 
+              <a href="../ajustes" class="btn btn-outline-success mx-2" *ngIf="loggedIn">Ajustes</a> 
+              <a href="#" class="btn btn-outline-success mx-2" (click)="logout($event)" *ngIf="loggedIn">Salir</a> 
+              <!--<button class="btn btn-outline-success d-flex justify-content-center flex-wrap" id="icono" *ngIf="loggedIn">
                 <mat-icon class="w-100">account_circle</mat-icon>
-              </button>
+              </button>-->
+
             </div>
           </div> 
         </div>
-        <div class="col-12 col-md-6 my-4">
-          <div class="row justify-content-end">
-            <div class="col-7 col-md-6">
-              <a href="../login" class="btn btn-outline-success w-100" id="registro">Registrarse</a>
-            </div>
-            <div class="col-7 col-md-6 mt-2 mt-md-0">
-              <a href="../signup" class="btn btn-outline-success w-100" id="acceso">Acceder</a>
-            </div>
-          </div>
-      </div>
-      </div>
+            <!--<div class="row justify-content-end" id="case">
+              <div class="col-7 col-md-6">
+                <a mat-menu-item href="../login" class="btn btn-outline-success w-100" id="registro">Ajustes</a>
+              </div>
+              <div class="col-7 col-md-6 mt-2 mt-md-0">
+                <a mat-menu-item href="#" (click)="logout($event)" class="btn btn-outline-success w-100" id="acceso">Salir</a>
+              </div>
+            </div>-->
+        </div>
       </div>
     </div>
 </nav>

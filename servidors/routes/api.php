@@ -17,29 +17,28 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+Route::group(['middleware' => 'api'], function (){
+
+    
+});
 
 Route::get('/users', function(){
     return UsersResource::collection(Users::all());
 });
 
-Route::get('/users/{id}', function($id){
+/*Route::get('/users/{id}', function($id){
     return new UsersResource(Users::findOrFail($id));
-});
+});*/
+
+Route::get('/users/{id}', [usersController::class, 'get']);
 
 Route::put('/users/{id}', [usersController::class, 'update']);
 
 Route::delete('/users/{id}', [usersController::class, 'destroy']);
 
-Route::post('/signup', [usersController::class, 'store']);
+Route::post('/signup', [AuthController::class, 'signup']);
 
 Route::post('/login', [AuthController::class, 'login']);
-
-/*Route::get('/admin', [AdminController::class, 'index'])
-       ->middleware('auth.admin')
-       ->name('admin.index');*/
-
-/*Route::post('/usuarios', [usuariosController::class, 'create']);*/
-/*Route::post('/acceder', [AccesoController::class, 'store']);*/
 
 /*Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->Us();

@@ -27,11 +27,11 @@
         <tbody *ngIf="usuario.length">
           <tr *ngFor="let us of usuario">
             <th scope="row">{{us.id}}</th>
-            <td>{{us.nombre}}</td>
-            <td>{{us.correo}}</td>
-            <td>{{us.tipo_usuario}}</td>
-            <td>{{us.contrasena}}</td>
-            <td>{{us.foto}}</td>
+            <td>{{us.name}}</td>
+            <td>{{us.email}}</td>
+            <td>{{us.type_user}}</td>
+            <td>{{us.password}}</td>
+            <td>{{us.photo}}</td>
             <td>
               <button (click)="deleteUsuarios(us.id)" class="btn btn-primary">Ascender</button>
               <button (click)="deleteUsuarios(us.id)" class="btn btn-danger">Borrar</button>

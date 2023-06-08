@@ -1,5 +1,6 @@
 const registro = document.getElementById('registro');
 const acceso = document.getElementById('acceso');
+var icono = document.getElementById('icono');
 
 icono.addEventListener('click', () => {
 

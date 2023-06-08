@@ -9,32 +9,31 @@ import { UsuariosService } from 'src/app/services/usuarios/usuarios.service';
 })
 export class SignupComponent {
   usuarios = {
-    name: '',
-    email: '',
-    type_user: 'usuario',
-    password: '',
-    photo: ''
+    name: null,
+    email: null,
+    type_user: 'user',
+    password: null,
+    photo: null
   };
 
   constructor(private UsuariosService : UsuariosService, private router: Router){}
 
-  registrarUsuario(name:string,email:string,password:string,photo:string) {
-    this.usuarios = {
-        name: name,
-        email: email,
-        type_user: 'user',
-        password: password,
-        photo: photo
-    }
+  public error: any = [];
+
+  registrarUsuario() {
+
     console.log(this.usuarios);
-    this.UsuariosService.saveUsuario(this.usuarios as any).subscribe(datos => {
-      console.log('Person created successfully!');
-      this.router.navigateByUrl('home');
-    });
-    console.log(this.usuarios);
+    return this.UsuariosService.saveUsuario(this.usuarios).subscribe(
+    datos => {
+      console.log(datos)
+      this.router.navigateByUrl('login')
+    },
+    error => this.handleError(error));
+
   }
 
-  /*onFotoSeleccionada(event: any) {
-    this.usuario.foto = event.target.files[0];
-  }*/
+  handleError(error:any){
+    this.error = error.error.error;
+  }
+
 } 
