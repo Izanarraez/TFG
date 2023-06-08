@@ -4,7 +4,7 @@ window.onload = function() {
     const jsonService = window['ng']['core']['jsonService'];
     
     // Llama al método getJsonData() para leer el archivo JSON
-    jsonService.getJsonData('ruta/al/archivo/data.json').subscribe(
+    jsonService.getJsonData('http://localhost:3000/Productos').subscribe(
       data => {
         // Aquí puedes utilizar los datos JSON
         console.log(data);
