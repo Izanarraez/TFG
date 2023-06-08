@@ -2,6 +2,7 @@
         {
                 "nombre":"Mercedes Benz OM 602",
                 "codigo":"0101M",
+                "descripcion":"",
                 "caracteristicas":[1,2,3],
                 "precio": 10.0,
                 "strock": 5,
