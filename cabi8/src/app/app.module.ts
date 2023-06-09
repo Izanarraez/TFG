@@ -15,9 +15,9 @@ import { UsuariosRoutingModule } from './modules/usuarios/usuario-routing.module
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     MatIconModule,
-    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     UsuariosRoutingModule
