@@ -3,6 +3,8 @@ import { UsuariosService } from 'src/app/services/usuarios/usuarios.service';
 import { TokenService } from 'src/app/services/token/token.service';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth/auth.service';
+import { RegistroService } from 'src/app/services/registro/registro.service';
+import { AccesoService } from 'src/app/services/acceso/acceso.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,7 +17,9 @@ export class LoginComponent implements OnInit {
       password: null,
     };
 
-  constructor(private UsuariosService : UsuariosService, private TokenService: TokenService, private router: Router, private auth: AuthService){}
+  constructor(private UsuariosService : UsuariosService, private TokenService: TokenService, private router: Router, private auth: AuthService, private acces : AccesoService){
+    this.acces.loadScript()
+  }
   
   ngOnInit(): void {
   }

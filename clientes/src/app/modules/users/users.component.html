@@ -33,8 +33,9 @@
             <td>{{us.password}}</td>
             <td>{{us.photo}}</td>
             <td>
-              <button (click)="deleteUsuarios(us.id)" class="btn btn-primary">Ascender</button>
-              <button (click)="deleteUsuarios(us.id)" class="btn btn-danger">Borrar</button>
+              <!--<a href="#" (click)="deleteUsuarios(us.id)" *ngIf="isUser()" class="btn btn-primary">Ascender</a>-->
+              <button (click)="ascendUsuarios(us.id,us.name,us.email,us.password,us.photo)" *ngIf="us.type_user !== 'admin'" class="btn btn-primary">Ascender</button>
+              <button (click)="deleteUsuarios(us.id)" *ngIf="us.type_user !== 'admin'" class="btn btn-danger">Borrar</button>
             </td>
           </tr>
         </tbody>

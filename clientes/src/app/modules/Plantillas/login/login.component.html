@@ -28,7 +28,6 @@
                                     id="correo_acceso"
                                     [(ngModel)]="form.email">
                             </div>
-                            <p id="error_correo_acceso" class="text-danger"></p>
                         </fieldset>
 
                         <fieldset class="col-12 col-md-12 mt-2">
@@ -43,6 +42,8 @@
                                     [(ngModel)]="form.password">
                             </div>
                         </fieldset>
+
+                        <p id="error_login" class="text-danger"></p>
 
                         <fieldset class="col-12 d-flex justify-content-center">
                             <button type="submit" class="btn btn-warning d-flex justify-content-center" id="enviar_acceso">Enviar</button>

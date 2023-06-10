@@ -13,4 +13,13 @@ export class AccesoService {
   acceso(correo: string, contraseña: string) {
     return this.http.post(this.url_acceso,{correo,contraseña});
   }
+
+  public loadScript() {
+    console.log('preparing to load...')
+    let node = document.createElement('script');
+    node.src = 'assets/js/form_signup.js';
+    node.type = 'text/javascript';
+    node.async = true;
+    document.getElementsByTagName('head')[0].appendChild(node);
+  }
 }

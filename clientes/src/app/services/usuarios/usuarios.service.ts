@@ -54,9 +54,8 @@ export class UsuariosService {
     return this.http.post<any>('http://127.0.0.1:8000/api/login',usuario, this.headers);
   }
 
-  /*ascendUsuarios(id: number, tipo_usuario : number){
-    const body = { tipo_usuario: tipo_usuario };
-    return this.http.put(this.url_usuarios+'/'+id, body, {headers: this.headers});
-  }*/
+  ascendUsuarios(id: number, user : any){
+    return this.http.put(this.url_usuarios+id, user, this.headers);
+  }
 
 }

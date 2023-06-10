@@ -25,4 +25,13 @@ export class RegistroService {
   saveUsuario(usuario: any): Observable<any> {
     return this.http.post<any>(this.url_registro, usuario, this.headers);
   }
+
+  public loadScript() {
+    console.log('preparing to load...')
+    let node = document.createElement('script');
+    node.src = 'assets/js/form_signup.js';
+    node.type = 'text/javascript';
+    node.async = true;
+    document.getElementsByTagName('head')[0].appendChild(node);
+  }
 }

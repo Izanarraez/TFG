@@ -14,13 +14,16 @@
               <a class="nav-link text-end" href="../home">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-end" href="../users" *ngIf="isAdmin()">Usuarios</a>
+              <a class="nav-link text-end" href="../products" *ngIf="loggedIn && usu.type_user === 'user' || !loggedIn">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-end" href="../users" *ngIf="loggedIn && usu.type_user === 'admin'">Usuarios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-end" href="../product" *ngIf="loggedIn && usu.type_user === 'admin'">Producto</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-end" href="../contact">Contacto</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-end" href="../product" *ngIf="isAdmin()">Producto</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -29,15 +32,27 @@
           </form>
           <div class="row w-100 justify-content-start mt-2 mt-md-0 ms-2">
             <div class="col-12 col-md-6 d-flex justify-content-end justify-content-md-start">
-              <a href="../carrito" class="btn btn-outline-success" *ngIf="isUser()"><mat-icon>shopping_cart</mat-icon></a> 
+              <a href="../carrito" class="btn btn-outline-success" *ngIf="loggedIn && usu.type_user === 'user'"><mat-icon>shopping_cart</mat-icon></a> 
               <a href="../login" class="btn btn-outline-success mx-2" *ngIf="!loggedIn">Acceder</a> 
               <a href="../signup" class="btn btn-outline-success mx-2" *ngIf="!loggedIn">Registrarse</a> 
               <a href="../ajustes" class="btn btn-outline-success mx-2" *ngIf="loggedIn">Ajustes</a> 
               <a href="#" class="btn btn-outline-success mx-2" (click)="logout($event)" *ngIf="loggedIn">Salir</a> 
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </button>
+                <ul class="dropdown-menu">
+                  <li><button class="dropdown-item" type="button">Action</button></li>
+                  <li><button class="dropdown-item" type="button">Another action</button></li>
+                  <li><button class="dropdown-item" type="button">Something else here</button></li>
+                </ul>
+              </div>
               <!--<button class="btn btn-outline-success d-flex justify-content-center flex-wrap" id="icono" *ngIf="loggedIn">
                 <mat-icon class="w-100">account_circle</mat-icon>
               </button>-->
+              <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
             </div>
           </div> 
         </div>
