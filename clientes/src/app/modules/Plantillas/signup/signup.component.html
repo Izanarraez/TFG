@@ -15,7 +15,7 @@
     <section class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-6">
-                <form (ngSubmit)="registrarUsuario()" enctype="multipart/form-data" id="form_registro">
+                <form (ngSubmit)="registrarUsuario()" [formGroup]="form" enctype="multipart/form-data" id="form_registro">
                     <div class="row justify-content-center">
 
                         <fieldset class="col-12 col-md-12 mt-2">
@@ -27,9 +27,11 @@
                                     class="form-control"
                                     placeholder="Nombre"
                                     id="nombre_registro"
-                                    [(ngModel)]="usuarios.name">
+                                    formControlName="name">
                             </div>
-                            <p id="error_nombre_registro" class="text-danger" [hidden]="!error.name">{{error.name}}</p>
+                            <p id="error_nombre_registro" class="bg-danger" [hidden]="form.get('name')?.valid || form.get('name')?.pristine">
+                                El nombre no puede estar vacio, ni llevar numeros, ni caracteres raros
+                            </p>
                         </fieldset>
 
                         <fieldset class="col-12 col-md-12 mt-2">
@@ -41,9 +43,11 @@
                                     class="form-control"
                                     placeholder="Correo"
                                     id="correo_registro"
-                                    [(ngModel)]="usuarios.email">
+                                    formControlName="email">
                             </div>
-                            <p id="error_correo_registro" class="text-danger" [hidden]="!error.email">{{error.email}}</p>
+                            <p id="error_correo_registro" class="text-danger" [hidden]="form.get('email')?.valid || form.get('email')?.pristine">
+                                El email esta mal formado
+                            </p>
                         </fieldset>
 
                         <fieldset class="col-12 col-md-12 mt-2">
@@ -54,10 +58,12 @@
                                     name="contrasena"
                                     class="form-control"
                                     placeholder="Contraseña"
-                                    id="contraseña_registro"
-                                    [(ngModel)]="usuarios.password">
+                                    id="contrasena_registro"
+                                    formControlName="password">
                             </div>
-                            <p id="error_contraseña_registro" class="text-danger" [hidden]="!error.password">{{error.password}}</p>
+                            <p id="error_contraseña_registro" class="text-danger" [hidden]="form.get('password')?.valid || form.get('password')?.pristine">
+                                La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula y al menos una mayúscula
+                            </p>
                         </fieldset>
 
 
@@ -70,17 +76,18 @@
                                     class="form-control"
                                     placeholder="Foto"
                                     id="foto_registro"
-                                    [(ngModel)]="usuarios.photo">
+                                    formControlName="photo">
                             </div>
                         </fieldset>
 
                         <fieldset class="col-12 d-flex justify-content-center my-3">
-                            <button type="submit" class="btn btn-warning d-flex justify-content-center" id="enviar_acceso">Enviar</button>
+                            <button type="submit" class="btn btn-warning d-flex justify-content-center" id="enviar_registro" [disabled]="!form.valid">Enviar</button>
                         </fieldset>
                     </div>
                 </form>
             </div>
         </div>
+        {{ form.get('password')?.value}}
     </section>
 
     <footer>

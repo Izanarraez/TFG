@@ -33,7 +33,7 @@ export class NavbarComponent implements OnInit {
     this.router.navigateByUrl('login');
   }
 
-  isAdmin(){
+  /*isAdmin(){
     if(this.loggedIn && this.usu.type_user === 'admin'){
       return true;
     }
@@ -49,11 +49,7 @@ export class NavbarComponent implements OnInit {
     else{
       return false;
     }
-  }
-
-  type(){
-    return this.usu.type_user;
-  }
+  }*/
 
   getToken(){
     return this.token.get();
