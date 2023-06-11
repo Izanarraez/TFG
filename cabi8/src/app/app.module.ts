@@ -8,6 +8,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UsuariosRoutingModule } from './modules/usuarios/usuario-routing.module';
+import { ProductoComponent } from './modules/producto/producto/producto.component';
 
 @NgModule({
   declarations: [

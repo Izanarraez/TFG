@@ -36,17 +36,24 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-12">
-                    <div class="row"></div>
-                </div>
             </div>
             
         </div>
 
-        <div class="container">
-            <div class="row border">
-                <div></div>
-                <h1></h1>
+        <div *ngFor="let producto of Productos" class="border d-flex flex-column justify-content-around m-3">
+            <h1 class="text-center border p-3 bg-dark text-white">{{producto.nombre}}</h1>
+            
+            <div class="d-flex flex-row justify-content-around align-items-center">
+                <div class="col-6 d-flex flex-column" id="infoProducto">
+                    <h2>Precio: {{producto.precio}}€</h2>
+                    <h2>Unidades disponibles: {{producto.stock}}</h2>
+                    <div id="botones" class="col-12 d-flex flex-row mt-3">
+                        <button class="btn btn-primary m-2">Comprar</button>
+                        <button class="btn btn-primary m-2">Añadir al carrito</button>
+                    </div>
+                </div>
+                <img src={{producto.foto}} alt="imagenProducto" class="col-2">
+                
             </div>
         </div>
     </section>

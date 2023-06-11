@@ -1,56 +1,43 @@
-{
-    "Productos":[
-        {
-            "1":{
-                "nombre":"1.0 eTSI de 110 CV",
-                "precio": 500.00,
-                "strock": 5,
-                "descripción": "Motor del grupo Vag, gasolina con 110 CV",
-                "caracteristicas":{
-                    "Potencia" : "110CV",
-                    "Combustible": "Gasolina",
-                    "Cilindrada" :	"999 cc",
-                    "Consumo medio" : "5.1l/100km"
-                },
-                "foto":"",
-                "tipo":""
-            },
-            "2":{
-                "nombre":"",
-                "precio": 0.0,
-                "strock": 0,
-                "descripción": [],
-                "caracteristicas":[],
-                "foto":"",
-                "tipo":""
-            },
-            "3":{
-                "nombre":"",
-                "precio": 0.0,
-                "strock": 0,
-                "descripción": [],
-                "caracteristicas":[],
-                "foto":"",
-                "tipo":""
-            },
-            "4":{
-                "nombre":"",
-                "precio": 0.0,
-                "strock": 0,
-                "descripción": [],
-                "caracteristicas":[],
-                "foto":"",
-                "tipo":""
-            },
-            "5":{
-                "nombre":"",
-                "precio": 0.0,
-                "strock": 0,
-                "descripción": [],
-                "caracteristicas":[],
-                "foto":"",
-                "tipo":""
-            }
-        }
-    ]
-}  
+[
+    {
+            "nombre":"Mercedes Benz OM 602",
+            "codigo":"0101M",
+            "caracteristicas":[1,2,3],
+            "precio": 10.0,
+            "stock": 5,
+            "ofertas": false,
+            "tipo": "motores",
+            "foto":"assets/img/frenado.jpg"
+    },
+    {
+            "nombre":"Mitsubishi 4G63",
+            "codigo":"0101M",
+            "caracteristicas":[1,2,3],
+            "precio": 10.0,
+            "stock": 5,
+            "ofertas": true,
+            "tipo": "motores",
+            "foto":"assets/img/frenado.jpg"
+    },
+    {       
+            "nombre":"BMW M60",
+            "codigo":"0101M",
+            "caracteristicas":[1,2,3],
+            "precio": 10.0,
+            "stock": 5,
+            "ofertas": false,
+            "tipo": "motores",
+            "foto":"assets/img/frenado.jpg"
+    },
+    {
+            "nombre":"Toyota 3SFE",
+            "codigo":"0101M",
+            "caracteristicas":[1,2,3],
+            "precio": 10.0,
+            "stock": 5,
+            "ofertas": false,
+            "tipo": "motores",
+            "foto":"assets/img/frenado.jpg"
+    }
+
+]

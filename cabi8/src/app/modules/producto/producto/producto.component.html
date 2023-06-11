@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <section class="container-fluid">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Codigo</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Careacteristicas</th>
+                <th scope="col">Foto</th>
+                <th scope="col">
+                  <a href="#" class="btn btn-warning">Crear</a>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let producto of Productos">
+                <th scope="row">{{producto.codigo}}</th>
+                <td>{{producto.nombre}}</td>
+                <td>{{producto.precio}}</td>
+                <td>{{producto.stock}}</td>
+                <td>{{producto.caracteristicas}}</td>
+                <td><img src={{producto.foto}} alt="" class="col-3"></td>
+                <td>
+                    <a href="#" class="btn btn-primary" id="editarProducto">Editar</a>
+                    <a href="#" class="btn btn-warning" id="borrarProducto">Borrar</a>
+                    </td>
+              </tr>
+            </tbody>
+          </table>
+    </section>
+</body>
+</html>

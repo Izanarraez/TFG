@@ -1,15 +1,14 @@
-import { Component } from '@angular/core';
-import { RestService } from './rest.service';
+import { Component, OnInit } from '@angular/core';
 
 import Producto from 'src/app/json/products.json';
 
 @Component({
-  selector: 'app-productos',
-  templateUrl: './productos.component.html',
-  styleUrls: ['./productos.component.css']
+  selector: 'app-producto',
+  templateUrl: './producto.component.html',
+  styleUrls: ['./producto.component.css']
 })
 
-export class ProductosComponent {
+export class ProductoComponent implements OnInit{
   title = 'Productos';
 
   Productos:any = Producto;
@@ -44,7 +43,4 @@ export class ProductosComponent {
     
 
   }
-    
-
-
 }
