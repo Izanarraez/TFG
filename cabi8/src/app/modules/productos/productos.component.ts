@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ProductosService } from 'src/app/services/productos/productos.service';
 import { RestService } from './rest.service';
 
 import Producto from 'src/app/json/products.json';
@@ -9,42 +10,48 @@ import Producto from 'src/app/json/products.json';
   styleUrls: ['./productos.component.css']
 })
 
-export class ProductosComponent {
+export class ProductosComponent implements OnInit {
   title = 'Productos';
 
-  Productos:any = Producto;
+  listaProductos : any = [];
 
-  ngOnInit(): void{
-    this.comprobarOferta();
+  constructor(private ProductoService : ProductosService){}
+
+  ngOnInit(): void {
+      return this.getProductos();
   }
 
-  public comprobarOferta(){
-
-    this.Productos.forEach(producto => {
-
-      if(producto.ofertas === true){
-
-        let divProducto = document.getElementById("infoProducto") as HTMLElement;
-
-        let divOferta = document.createElement("div");
-        let oferta = document.createElement("p");
-
-        oferta.textContent = "¡Este producto está de oferta!";
-
-        oferta.appendChild(divOferta);
-
-        divOferta.appendChild(divProducto);
-
-
-        console.log(producto.nombre + " está de oferta");
-      }
-
-    });
-
-    
-
+  getProductos(){
+    this.ProductoService.getProducto().subscribe(respuesta => this.listaProductos = respuesta);
   }
+
+
     
 
 
 }
+
+/*import { Component, OnInit } from '@angular/core';
+import { ProductoService } from 'src/app/services/producto/producto.service';
+
+@Component({
+  selector: 'app-producto',
+  templateUrl: './producto.component.html',
+  styleUrls: ['./producto.component.css']
+})
+export class ProductoComponent implements OnInit{
+
+  listaProductos : any = [];
+
+  constructor(private ProductoService : ProductoService){}
+
+  ngOnInit(): void {
+      return this.getProductos();
+  }
+
+  getProductos(){
+    this.ProductoService.getProducto().subscribe(respuesta => this.listaProductos = respuesta);
+  }
+
+  
+}*/ 

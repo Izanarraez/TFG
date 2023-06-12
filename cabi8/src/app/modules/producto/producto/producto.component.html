@@ -20,26 +20,131 @@
                 <th scope="col">Stock</th>
                 <th scope="col">Careacteristicas</th>
                 <th scope="col">Foto</th>
-                <th scope="col">
-                  <a href="#" class="btn btn-warning">Crear</a>
-                </th>
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let producto of Productos">
-                <th scope="row">{{producto.codigo}}</th>
+              <tr *ngFor="let producto of listaProductos">
+                <th scope="row" #codigo>{{producto.codigo}}</th>
                 <td>{{producto.nombre}}</td>
                 <td>{{producto.precio}}</td>
                 <td>{{producto.stock}}</td>
                 <td>{{producto.caracteristicas}}</td>
                 <td><img src={{producto.foto}} alt="" class="col-3"></td>
                 <td>
-                    <a href="#" class="btn btn-primary" id="editarProducto">Editar</a>
-                    <a href="#" class="btn btn-warning" id="borrarProducto">Borrar</a>
-                    </td>
+                    <button type="button" id="editarProducto" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editarProducto">Editar</button>
+                    <button class="btn btn-warning" id="borrarProducto" (click)="deleteProductos(1)">Borrar</button>
+                </td>
               </tr>
+
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#crearProducto">
+                Crear nuevo producto
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="crearProducto" tabindex="-1" aria-labelledby="crearProducto" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Añadir nuevo producto</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Introduzca el nombre del producto</label>
+                          <input type="text" class="form-control" id="nombre" aria-describedby="nombre">
+                          
+                        </div>
+                        <div class="mb-3">
+                          <label for="codigoProducto" class="form-label">Código del producto</label>
+                          <input type="number" class="form-control" id="codigoProducto">
+                        </div>
+
+                        <div class="mb-3">
+                          <label for="caracteristicasProducto" class="form-label">Caracteristicas del producto</label>
+                          <input type="text" class="form-control" id="caracteristicasProducto">
+                        </div>
+
+                        <div class="mb-3">
+                          <label for="precioProducto" class="form-label">Precio</label>
+                          <input type="number" class="form-control" id="precioProducto">
+                        </div>
+
+                        <div class="mb-3">
+                          <label for="stockProducto" class="form-label">Stock actual</label>
+                          <input type="number" class="form-control" id="stockProducto">
+                        </div>
+
+                        <div class="mb-3">
+                          <label for="tipoProducto" class="form-label">Tipo de producto</label>
+                          <input type="text" class="form-control" id="tipoProducto">
+                        </div>
+                        
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn btn-primary" (click)="anadirProductos()">Añadir</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Modal editar producto-->
+              <div class="modal fade" id="editarProducto" tabindex="-1" aria-labelledby="editarProducto" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Editar producto</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Introduzca el nombre del producto</label>
+                          <input type="text" class="form-control" id="nombre" aria-describedby="nombre">
+                          
+                        </div>
+                        <div class="mb-3">
+                          <label for="codigoProducto" class="form-label">Código del producto</label>
+                          <input type="number" class="form-control" id="codigoProducto">
+                        </div>
+
+                        <div class="mb-3">
+                          <label for="caracteristicasProducto" class="form-label">Caracteristicas del producto</label>
+                          <input type="text" class="form-control" id="caracteristicasProducto">
+                        </div>
+
+                        <div class="mb-3">
+                          <label for="precioProducto" class="form-label">Precio</label>
+                          <input type="number" class="form-control" id="precioProducto">
+                        </div>
+
+                        <div class="mb-3">
+                          <label for="stockProducto" class="form-label">Stock actual</label>
+                          <input type="number" class="form-control" id="stockProducto">
+                        </div>
+
+                        <div class="mb-3">
+                          <label for="tipoProducto" class="form-label">Tipo de producto</label>
+                          <input type="text" class="form-control" id="tipoProducto">
+                        </div>
+                        
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn btn-primary" (click)="editProductos(1)" >Editar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
             </tbody>
           </table>
     </section>
+
 </body>
 </html>
