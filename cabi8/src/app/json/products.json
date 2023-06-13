@@ -1,14 +1,14 @@
 {
   "Productos": [
     {
-      "id": 2,
-      "codigo": "00002",
+      "id": 1,
+      "codigo": "0001",
       "nombre": "Mercedes",
-      "precio": "25000",
-      "stock": "4",
+      "precio": "1500",
+      "stock": "2",
       "tipo": "Motor",
       "caracteristicas": "Motor gasolina con 160Cv",
-      "foto": "C:\\fakepath\\hermoso-resultado-blanco-negro-estacion-wtc-cortlandt-metro-nueva-york-tambien-conocido-como-oculus.jpg"
+      "foto": "C:\\fakepath\\bmw-m3.jpg"
     }
   ]
 }

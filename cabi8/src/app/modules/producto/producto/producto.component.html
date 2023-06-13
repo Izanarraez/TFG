@@ -24,7 +24,7 @@
             </thead>
             <tbody>
               <tr *ngFor="let producto of listaProductos">
-                <th scope="row" #codigo id="codigo" (click)="setSelectedItem()">{{producto.id}}</th>
+                <th scope="row" #codigo id="codigo">{{producto.id}}</th>
                 <td>{{producto.nombre}}</td>
                 <td>{{producto.precio}}</td>
                 <td>{{producto.stock}}</td>
