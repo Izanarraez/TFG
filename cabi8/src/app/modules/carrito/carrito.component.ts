@@ -18,8 +18,13 @@ export class CarritoComponent implements OnInit {
 
   public mostrarCarrito() {
 
-    this.listaItems = this.CarritoService.get();
-    console.log(this.CarritoService.get());
+    const objetoCarrito = JSON.parse(this.CarritoService.get()!);
+
+    //console.log(objetoCarrito);
+
+    this.listaItems.push(objetoCarrito);
+
+    console.log(this.listaItems);
     
   }
 
