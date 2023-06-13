@@ -1,60 +1,14 @@
 {
   "Productos": [
     {
-      "nombre": "Mercedes Benz OM 602",
-      "codigo": "0101M",
-      "caracteristicas": [
-        1,
-        2,
-        3
-      ],
-      "precio": 10,
-      "strock": 5,
-      "ofertas": false,
-      "tipo": "motores",
-      "foto": "assets/img/frenado.jpg"
-    },
-    {
-      "nombre": "Mitsubishi 4G63",
-      "codigo": "0101M",
-      "caracteristicas": [
-        1,
-        2,
-        3
-      ],
-      "precio": 10,
-      "strock": 5,
-      "ofertas": false,
-      "tipo": "motores",
-      "foto": "assets/img/frenado.jpg"
-    },
-    {
-      "nombre": "BMW M60",
-      "codigo": "0101M",
-      "caracteristicas": [
-        1,
-        2,
-        3
-      ],
-      "precio": 10,
-      "strock": 5,
-      "ofertas": false,
-      "tipo": "motores",
-      "foto": "assets/img/frenado.jpg"
-    },
-    {
-      "nombre": "Toyota 3SFE",
-      "codigo": "0101M",
-      "caracteristicas": [
-        1,
-        2,
-        3
-      ],
-      "precio": 10,
-      "strock": 5,
-      "ofertas": false,
-      "tipo": "motores",
-      "foto": "assets/img/frenado.jpg"
+      "id": 2,
+      "codigo": "00002",
+      "nombre": "Mercedes",
+      "precio": "25000",
+      "stock": "4",
+      "tipo": "Motor",
+      "caracteristicas": "Motor gasolina con 160Cv",
+      "foto": "C:\\fakepath\\hermoso-resultado-blanco-negro-estacion-wtc-cortlandt-metro-nueva-york-tambien-conocido-como-oculus.jpg"
     }
   ]
 }

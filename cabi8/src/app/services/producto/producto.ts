@@ -5,4 +5,4 @@ export interface Producto {
     stock: number,
     caracteristicas : Array<any>,
     foto: String
-}
+} 

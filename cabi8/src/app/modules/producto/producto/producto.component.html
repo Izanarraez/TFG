@@ -24,15 +24,17 @@
             </thead>
             <tbody>
               <tr *ngFor="let producto of listaProductos">
-                <th scope="row" #codigo>{{producto.codigo}}</th>
+                <th scope="row" #codigo id="codigo" (click)="setSelectedItem()">{{producto.id}}</th>
                 <td>{{producto.nombre}}</td>
                 <td>{{producto.precio}}</td>
                 <td>{{producto.stock}}</td>
                 <td>{{producto.caracteristicas}}</td>
                 <td><img src={{producto.foto}} alt="" class="col-3"></td>
                 <td>
-                    <button type="button" id="editarProducto" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editarProducto">Editar</button>
-                    <button class="btn btn-warning" id="borrarProducto" (click)="deleteProductos(1)">Borrar</button>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editarProducto">
+                    Editar
+                  </button>
+                    <button class="btn btn-warning" id="borrarProducto" (click)="deleteProductos()">Borrar</button>
                 </td>
               </tr>
 
@@ -80,6 +82,11 @@
                           <label for="tipoProducto" class="form-label">Tipo de producto</label>
                           <input type="text" class="form-control" id="tipoProducto">
                         </div>
+
+                        <div class="mb-3">
+                          <label for="fotoProducto" class="form-label">Foto del producto</label>
+                          <input type="file" class="form-control" id="fotoProducto">
+                        </div>
                         
                       </form>
                     </div>
@@ -102,40 +109,45 @@
                     <div class="modal-body">
                       <form>
                         <div class="mb-3">
-                          <label for="exampleInputEmail1" class="form-label">Introduzca el nombre del producto</label>
-                          <input type="text" class="form-control" id="nombre" aria-describedby="nombre">
+                          <label for="editNombre" class="form-label">Introduzca el nombre del producto</label>
+                          <input type="text" class="form-control" id="editNombre" aria-describedby="nombre">
                           
                         </div>
                         <div class="mb-3">
-                          <label for="codigoProducto" class="form-label">Código del producto</label>
-                          <input type="number" class="form-control" id="codigoProducto">
+                          <label for="editCodigo" class="form-label">Código del producto</label>
+                          <input type="text" class="form-control" id="editCodigo">
                         </div>
 
                         <div class="mb-3">
-                          <label for="caracteristicasProducto" class="form-label">Caracteristicas del producto</label>
-                          <input type="text" class="form-control" id="caracteristicasProducto">
+                          <label for="editCaracteristicas" class="form-label">Caracteristicas del producto</label>
+                          <input type="text" class="form-control" id="editCaracteristicas">
                         </div>
 
                         <div class="mb-3">
-                          <label for="precioProducto" class="form-label">Precio</label>
-                          <input type="number" class="form-control" id="precioProducto">
+                          <label for="editPrecio" class="form-label">Precio</label>
+                          <input type="number" class="form-control" id="editPrecio">
                         </div>
 
                         <div class="mb-3">
-                          <label for="stockProducto" class="form-label">Stock actual</label>
-                          <input type="number" class="form-control" id="stockProducto">
+                          <label for="editStock" class="form-label">Stock actual</label>
+                          <input type="number" class="form-control" id="editStock">
                         </div>
 
                         <div class="mb-3">
-                          <label for="tipoProducto" class="form-label">Tipo de producto</label>
-                          <input type="text" class="form-control" id="tipoProducto">
+                          <label for="editTipo" class="form-label">Tipo de producto</label>
+                          <input type="text" class="form-control" id="editTipo">
+                        </div>
+
+                        <div class="mb-3">
+                          <label for="editFoto" class="form-label">Tipo de producto</label>
+                          <input type="file" class="form-control" id="editFoto">
                         </div>
                         
                       </form>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                      <button type="button" class="btn btn-primary" (click)="editProductos(1)" >Editar</button>
+                      <button type="button" class="btn btn-primary" (click)="editProductos()" >Editar</button>
                     </div>
                   </div>
                 </div>
