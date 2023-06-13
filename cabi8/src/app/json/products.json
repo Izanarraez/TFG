@@ -1,14 +1,15 @@
 {
   "Productos": [
     {
-      "id": 1,
-      "codigo": "0001",
-      "nombre": "Mercedes",
-      "precio": "1500",
+      "id": 2,
+      "codigo": "234234",
+      "nombre": "Hola",
+      "precio": "2323",
       "stock": "2",
       "tipo": "Motor",
       "caracteristicas": "Motor gasolina con 160Cv",
-      "foto": "C:\\fakepath\\bmw-m3.jpg"
+      "foto": "C:\\fakepath\\bmw-m3.jpg",
+      "oferta": false
     }
   ]
 }

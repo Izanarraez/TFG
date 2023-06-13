@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    
+    <app-navbar></app-navbar>
+
+    <section class="container-fluid">
+        <tr *ngFor="let item of listaItems">
+
+            <th scope="row">{{item.id}}</th>
+            <td>{{listaItems}}</td>
+            <td>{{item.precio}}</td>
+            <td>{{item.stock}}</td>
+            <td>{{item.caracteristicas}}</td>
+            <td><img src={{item.foto}} alt="" class="col-3"></td>
+            <td>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editarProducto">
+                Editar
+              </button>
+                <button class="btn btn-warning" id="borrarProducto">Borrar</button>
+            </td>
+          </tr>
+    </section>
+
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+
+</body>
+</html>

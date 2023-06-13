@@ -52,6 +52,7 @@ export class ProductoComponent implements OnInit{
     const stockProducto = (<HTMLInputElement>document.getElementById("editStock")).value;
     const tipoProducto = (<HTMLInputElement>document.getElementById("editTipo")).value;
     const fotoProducto = (<HTMLInputElement>document.getElementById("editFoto")).value;
+    const ofertaProducto = (<HTMLInputElement>document.getElementById("editOferta")).value;
 
 
     const updatedData = { 
@@ -62,7 +63,8 @@ export class ProductoComponent implements OnInit{
       stock: stockProducto,
       tipo: tipoProducto,
       caracteristicas : caracteristicasProducto,
-      foto: fotoProducto
+      foto: fotoProducto,
+      oferta: false
      };
 
     this.ProductoService.editProductos(this.setSelectedItem(), updatedData)
@@ -97,7 +99,8 @@ export class ProductoComponent implements OnInit{
       stock: stockProducto,
       tipo: tipoProducto,
       caracteristicas : caracteristicasProducto,
-      foto: fotoProducto
+      foto: fotoProducto,
+      oferta: false
     };
 
     this.ProductoService.anadirProductos(newData)

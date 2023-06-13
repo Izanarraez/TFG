@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UsuariosRoutingModule } from './modules/usuarios/usuario-routing.module';
 import { ProductoComponent } from './modules/producto/producto/producto.component';
+import { CarritoService } from "./services/carrito/carrito.service";
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ProductoComponent } from './modules/producto/producto/producto.componen
     UsuariosRoutingModule
   ],
   exports:[],
+  providers: [CarritoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

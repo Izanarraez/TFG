@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductosService } from 'src/app/services/productos/productos.service';
-import { RestService } from './rest.service';
-
-import Producto from 'src/app/json/products.json';
+import { CarritoComponent } from "src/app/modules/carrito/carrito.component";
+import { CarritoService } from 'src/app/services/carrito/carrito.service';
 
 @Component({
   selector: 'app-productos',
@@ -15,19 +14,23 @@ export class ProductosComponent implements OnInit {
 
   listaProductos : any = [];
 
-  constructor(private ProductoService : ProductosService){}
+  constructor(private ProductoService : ProductosService, private CarritoService : CarritoService){}
 
   ngOnInit(): void {
       return this.getProductos();
+
   }
 
   getProductos(){
     this.ProductoService.getProducto().subscribe(respuesta => this.listaProductos = respuesta);
   }
 
+  public anadirItem(producto: any){
 
+    this.CarritoService.set(producto);
     
 
+  }
 
 }
 
