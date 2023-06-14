@@ -10,6 +10,17 @@
       "caracteristicas": "Motor gasolina con 160Cv",
       "foto": "",
       "oferta": false
+    },
+    {
+      "id": 2,
+      "codigo": "",
+      "nombre": "Hola",
+      "precio": "",
+      "stock": "",
+      "tipo": "",
+      "caracteristicas": "",
+      "foto": "",
+      "oferta": false
     }
   ]
 }
